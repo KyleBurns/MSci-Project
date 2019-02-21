@@ -18,38 +18,56 @@ import org.chocosolver.solver.search.strategy.decision.Decision;
 import org.chocosolver.solver.search.strategy.decision.IntDecision;
 import org.chocosolver.solver.search.strategy.selectors.values.IntDomainRandom;
 import org.chocosolver.solver.search.strategy.selectors.values.IntValueSelector;
-import org.chocosolver.solver.search.strategy.selectors.variables.FirstFail;
 import org.chocosolver.solver.search.strategy.selectors.variables.VariableSelector;
 import org.chocosolver.solver.search.strategy.strategy.AbstractStrategy;
 import org.chocosolver.solver.search.strategy.strategy.IntStrategy;
 import org.chocosolver.solver.variables.IntVar;
 
 public abstract class ParallelModel {
-
-	public long startTime;
-	public long stopClock;
 	
-	public long timeSpentSearching = 0;
-	public long timeSpentRestarting = 0;
-	
-	private static int threadCounter = 0;
+	private int threadCounter;
     private CyclicBarrier cyclicBarrier;
     private int NUM_WORKERS;
     private Solver[] s;
     
+    private int timeout;
+    private float fastestTime;
+    private String returnString;
+    
+    private boolean useBacktrackRestarts;
+    private boolean useSolutionBiased;
+    
     public abstract Model buildModel();
     
-    protected void runSolvers(int numWorkers) {
+    protected String runSolvers(int numWorkers, int timeLimit, boolean useBacktrackRestarts, boolean useSolutionBiased) {
         NUM_WORKERS = numWorkers;
+        threadCounter = 0;
+        timeout = timeLimit;
+        
+        fastestTime = 0;
+        returnString = "";
+        
+        this.useBacktrackRestarts = useBacktrackRestarts;
+        this.useSolutionBiased = useSolutionBiased;
+        
         cyclicBarrier = new CyclicBarrier(NUM_WORKERS, new AggregatorThread());
         s = new Solver[NUM_WORKERS];
-
+        Thread[] threads  = new Thread[NUM_WORKERS];
+        
         System.out.println("Spawning " + NUM_WORKERS + " worker threads");
         for (int i = 0; i < NUM_WORKERS; i++) {
-            Thread worker = new Thread(new ParallelThread());
-            worker.setName("Thread " + i);
-            worker.start();
+            threads[i] = new Thread(new ParallelThread());
+            threads[i].setName("t" + i);
+            threads[i].start();
         }
+        for (Thread thread : threads) {
+            try {
+				thread.join();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+        }	
+        return returnString;
     }
     
     private void setTimedRestarting(Model model) {
@@ -84,10 +102,9 @@ public abstract class ParallelModel {
 	    Random random = new Random(seed);
 	    
 	    AbstractStrategy<IntVar> former = model.getSolver().getSearch();
-	    		
     	IntStrategy sbSearch = 		
     			Search.intVarSearch(
-	    			(VariableSelector) i -> {
+	    			(VariableSelector) i -> {	    				
 	    				if(former.getDecision() != null)
 	    					return former.getDecision().getDecisionVariable();
 	    				return null;
@@ -109,44 +126,43 @@ public abstract class ParallelModel {
         @Override
         public void run() {
         	final Model model = buildModel();
-        	//setRandSearch(model, threadIndex*1000);
-        	setSolutionBiasedSearch(model, threadIndex*1000);
         	
-        	//setBacktrackRestarting(model);
-        	setTimedRestarting(model);
+        	if(useSolutionBiased) setSolutionBiasedSearch(model, threadIndex*1000);
+        	else setRandSearch(model, threadIndex*1000);
         	
-        	Solver solver = model.getSolver();    
+        	if(useBacktrackRestarts) setBacktrackRestarting(model);
+        	else setTimedRestarting(model);
+        	
+        	Solver solver = model.getSolver(); 
+        	s[threadIndex] = solver;
+        	
 	   	    solver.plugMonitor(new IMonitorRestart() {
 	   	    	@Override	
-	   	    	public void beforeRestart() {	
-	   	    		timeSpentSearching += System.currentTimeMillis() - stopClock;
-	   	    		stopClock = System.currentTimeMillis();
-	   	    		
-	   	    		s[threadIndex] = solver;
-	   	    		
-	   	    		try {cyclicBarrier.await();}
-	                catch (InterruptedException | BrokenBarrierException e) {e.printStackTrace();}
-	   	    		
-	   	    		extractNogoodFromPathParallel(model);
-	   	    		
-	   	    		try {cyclicBarrier.await();}
-	                catch (InterruptedException | BrokenBarrierException e) {e.printStackTrace();}
-	   	    		
-	   	    		timeSpentRestarting += System.currentTimeMillis() - stopClock;
-	   	    		stopClock = System.currentTimeMillis();
+	   	    	public void beforeRestart() {
+	   	    		try {
+	   	    			cyclicBarrier.await();
+		   	    		extractNogoodFromPathParallel(model);
+		   	    		cyclicBarrier.await();
+		   	    	}
+	                catch (InterruptedException | BrokenBarrierException e) {
+	                	solver.addStopCriterion(() -> true);
+	                }	   	    		
 	   	    	}
 		    });
-	   	    startTime = System.currentTimeMillis();
-	   	    stopClock = System.currentTimeMillis();
-    		if (solver.solve()) System.out.println("Satisfied!");
-        	else System.out.println("Unsatisfied!");
-    		timeSpentSearching += System.currentTimeMillis() - stopClock;
-    		System.out.println(solver.getMeasures());
-    		long totalTime = System.currentTimeMillis() - startTime;
-        	System.out.println(timeSpentSearching + "ms searching (" + (100*timeSpentSearching)/totalTime + "%)");
-        	System.out.println(timeSpentRestarting + "ms restarting (" + (100*timeSpentRestarting)/totalTime + "%)");
-        	System.out.println(totalTime + "ms total");
-        	System.exit(0);
+	   	    
+	   	    solver.limitTime(timeout + "s");
+	   	    Boolean status = solver.solve();
+	   	    if(fastestTime == 0) {
+	    		fastestTime = solver.getMeasures().getTimeCount();
+	    		for (Thread t : Thread.getAllStackTraces().keySet())
+	    			if (t.getName().startsWith("t") && !t.equals(Thread.currentThread())) t.interrupt();
+
+		   	    if(status) returnString = NUM_WORKERS + ",sat,";
+		   	    else if(solver.isStopCriterionMet()) returnString = NUM_WORKERS + ",timeout,";
+		   	    else returnString = NUM_WORKERS + ",unsat,";	
+		   	    returnString += fastestTime + "s," + solver.getMeasures().getNodeCount();
+	    		Thread.currentThread().interrupt();
+	   	    }  	   	      
         }
     }
     
