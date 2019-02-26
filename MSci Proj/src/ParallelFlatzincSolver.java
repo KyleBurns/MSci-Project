@@ -1,5 +1,7 @@
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 import org.chocosolver.parser.flatzinc.Flatzinc;
@@ -11,36 +13,40 @@ public class ParallelFlatzincSolver extends ParallelModel{
 
 	private String filepath;
 	
-	public static void main(String[] args) {
-		ParallelFlatzincSolver pfs = new ParallelFlatzincSolver("C:\\Users\\Kyle\\Desktop\\ChocoFZN-Decision\\magicseq\\300.czn");
-		pfs.ParallelSpeedupTest();
+	public static void main(String[] args) throws IOException {
+		ParallelFlatzincSolver pfs = new ParallelFlatzincSolver("C:\\Users\\Kyle\\Desktop\\ChocoFZN-Decision\\blackhole\\3.czn");
+		pfs.runModel(2, 1);
 	}
 	
 	public ParallelFlatzincSolver(String fp) {
 		this.filepath = fp;
 	}
 	
-	public void ParallelSpeedupTest() {
-		String str = "";
-		int[] noThreads = new int[]{32, 24, 16, 12, 8, 4, 2, 1};
-		str += "Solution Biased - Backtrack\n";
-		for(int i=0;i<8;i++)
-			str += runSolvers(noThreads[i], 60, true, true) + "\n";
-		str += "Solution Biased - Time\n";
-		for(int i=0;i<8;i++)
-			str += runSolvers(noThreads[i], 60, true, true) + "\n";
-		str += "Random - Backtrack\n";
-		for(int i=0;i<8;i++)
-			str += runSolvers(noThreads[i], 60, true, true) + "\n";
-		str += "Random - Time\n";
-		for(int i=0;i<8;i++)
-			str += runSolvers(noThreads[i], 60, true, true) + "\n";
-		
+	public void runModel(int noThreads, int config) throws IOException {
+		String outString = "";
+		String outFile = "";
+		switch(config) {
+		case 0: outString = runSolvers(noThreads, 100, true, true) + "\n"; outFile = "sol-bt"; break;
+		case 1: outString = runSolvers(noThreads, 100, true, false) + "\n"; outFile = "rand-bt"; break;
+		case 2: outString = runSolvers(noThreads, 100, false, true) + "\n"; outFile = "sol-time"; break; 
+		case 3: outString = runSolvers(noThreads, 100, false, false) + "\n"; outFile = "rand-time"; break;
+		default: outString = "";
+		}
+
 		try {
-			String[] stuff = filepath.split("\\\\"); 
-			PrintWriter writer = new PrintWriter(stuff[stuff.length-1].replaceAll(".czn", "-results.csv"), "UTF-8");
-			writer.write(str);
+			File file = new File(filepath);
+			String instance = file.getName().replaceFirst(".czn", "");
+			String problem = new File(file.getParent()).getName();
+			
+			File resultFile = new File("results-" + outFile + ".txt");
+			if(!resultFile.exists())
+				resultFile.createNewFile();
+			
+			FileWriter writer = new FileWriter(resultFile, true);
+			writer.write(problem + " " + instance + " " + noThreads + " " + outString);
 			writer.close();
+			System.out.print(problem + " " + instance + " " + noThreads + " " + outString);
+			
 		} catch (FileNotFoundException|UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}

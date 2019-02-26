@@ -28,8 +28,9 @@ public abstract class ParallelModel {
 	private int threadCounter;
     private CyclicBarrier cyclicBarrier;
     private int NUM_WORKERS;
+    private final Object lock = new Object();
     private Solver[] s;
-    
+
     private int timeout;
     private float fastestTime;
     private String returnString;
@@ -44,13 +45,14 @@ public abstract class ParallelModel {
         threadCounter = 0;
         timeout = timeLimit;
         
+        
         fastestTime = 0;
         returnString = "";
         
         this.useBacktrackRestarts = useBacktrackRestarts;
         this.useSolutionBiased = useSolutionBiased;
         
-        cyclicBarrier = new CyclicBarrier(NUM_WORKERS, new AggregatorThread());
+        cyclicBarrier = new CyclicBarrier(NUM_WORKERS);
         s = new Solver[NUM_WORKERS];
         Thread[] threads  = new Thread[NUM_WORKERS];
         
@@ -126,6 +128,8 @@ public abstract class ParallelModel {
         @Override
         public void run() {
         	final Model model = buildModel();
+    		final PropNogoods png = model.getNogoodStore().getPropNogoods();
+        	ArrayDeque<Decision> decisions = new ArrayDeque<>(16);
         	
         	if(useSolutionBiased) setSolutionBiasedSearch(model, threadIndex*1000);
         	else setRandSearch(model, threadIndex*1000);
@@ -141,10 +145,10 @@ public abstract class ParallelModel {
 	   	    	public void beforeRestart() {
 	   	    		try {
 	   	    			cyclicBarrier.await();
-		   	    		extractNogoodFromPathParallel(model);
+	   	    			extractNogoodFromPathParallel(model, png, decisions);
 		   	    		cyclicBarrier.await();
 		   	    	}
-	                catch (InterruptedException | BrokenBarrierException e) {
+	                catch (BrokenBarrierException | InterruptedException e) {	             
 	                	solver.addStopCriterion(() -> true);
 	                }	   	    		
 	   	    	}
@@ -152,31 +156,29 @@ public abstract class ParallelModel {
 	   	    
 	   	    solver.limitTime(timeout + "s");
 	   	    Boolean status = solver.solve();
-	   	    if(fastestTime == 0) {
-	    		fastestTime = solver.getMeasures().getTimeCount();
-	    		for (Thread t : Thread.getAllStackTraces().keySet())
-	    			if (t.getName().startsWith("t") && !t.equals(Thread.currentThread())) t.interrupt();
-
-		   	    if(status) returnString = NUM_WORKERS + ",sat,";
-		   	    else if(solver.isStopCriterionMet()) returnString = NUM_WORKERS + ",timeout,";
-		   	    else returnString = NUM_WORKERS + ",unsat,";	
-		   	    returnString += fastestTime + "s," + solver.getMeasures().getNodeCount();
-	    		Thread.currentThread().interrupt();
-	   	    }  	   	      
+	   	    
+	   	    synchronized(lock) {
+	   	    	if(fastestTime == 0) {
+		   	    	fastestTime = solver.getMeasures().getTimeCount();
+		   	    	long totalNodeCount = 0;
+			   	    for(Solver so : s) {
+			   	    	so.addStopCriterion(() -> true);
+			   	    	totalNodeCount += so.getNodeCount();  	
+			   	    }
+		    		
+			   	    if(status) returnString = "sat ";
+			   	    else if(solver.isStopCriterionMet()) returnString = "timeout ";
+			   	    else returnString = NUM_WORKERS + "unsat ";	
+			   	    
+			   	    returnString += fastestTime + " " + solver.getMeasures().getNodeCount() + " " + totalNodeCount;
+			   	    cyclicBarrier.reset();
+	   	    	}
+	   	    }
         }
     }
     
-	class AggregatorThread implements Runnable {
-	    @Override
-	    public void run() {	
-	    }
-	}
-	
-	private void extractNogoodFromPathParallel(Model model) {	
-		PropNogoods png = model.getNogoodStore().getPropNogoods();
-		
-		for(int m=0;m<NUM_WORKERS;m++) {
-			ArrayDeque<Decision> decisions = new ArrayDeque<Decision>(16);		
+	private void extractNogoodFromPathParallel(Model model, PropNogoods png, ArrayDeque<Decision> decisions) {	
+		for(int m=0;m<NUM_WORKERS;m++) {		
 	        int d = (int) s[m].getNodeCount();
 	        s[m].getDecisionPath().transferInto(decisions, false);
 	
