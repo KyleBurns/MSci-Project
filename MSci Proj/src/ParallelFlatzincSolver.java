@@ -16,8 +16,8 @@ public class ParallelFlatzincSolver extends ParallelModel{
 	private String filepath;
 	
 	public static void main(String[] args) throws IOException {
-		ParallelFlatzincSolver pfs = new ParallelFlatzincSolver("C:\\Users\\Kyle\\Desktop\\Blackhole\\Blackhole-xcsp2-s04\\Blackhole-4-04-9_X2.xml");
-		pfs.runModel(4, 2, 100);
+		ParallelFlatzincSolver pfs = new ParallelFlatzincSolver(args[0]);
+		pfs.runModel(Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]));
 	}
 	
 	public ParallelFlatzincSolver(String fp) {
