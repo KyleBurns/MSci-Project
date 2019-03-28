@@ -1,0 +1,125 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="q" size="[10]"> 0..9 </array>
+    <array id="k" size="[5]"> 0..99 </array>
+  </variables>
+  <constraints>
+    <group>
+      <intension> and(ne(%0,%1),ne(dist(%0,%1),%2)) </intension>
+      <args> q[0] q[1] 1 </args>
+      <args> q[0] q[2] 2 </args>
+      <args> q[0] q[3] 3 </args>
+      <args> q[0] q[4] 4 </args>
+      <args> q[0] q[5] 5 </args>
+      <args> q[0] q[6] 6 </args>
+      <args> q[0] q[7] 7 </args>
+      <args> q[0] q[8] 8 </args>
+      <args> q[0] q[9] 9 </args>
+      <args> q[1] q[2] 1 </args>
+      <args> q[1] q[3] 2 </args>
+      <args> q[1] q[4] 3 </args>
+      <args> q[1] q[5] 4 </args>
+      <args> q[1] q[6] 5 </args>
+      <args> q[1] q[7] 6 </args>
+      <args> q[1] q[8] 7 </args>
+      <args> q[1] q[9] 8 </args>
+      <args> q[2] q[3] 1 </args>
+      <args> q[2] q[4] 2 </args>
+      <args> q[2] q[5] 3 </args>
+      <args> q[2] q[6] 4 </args>
+      <args> q[2] q[7] 5 </args>
+      <args> q[2] q[8] 6 </args>
+      <args> q[2] q[9] 7 </args>
+      <args> q[3] q[4] 1 </args>
+      <args> q[3] q[5] 2 </args>
+      <args> q[3] q[6] 3 </args>
+      <args> q[3] q[7] 4 </args>
+      <args> q[3] q[8] 5 </args>
+      <args> q[3] q[9] 6 </args>
+      <args> q[4] q[5] 1 </args>
+      <args> q[4] q[6] 2 </args>
+      <args> q[4] q[7] 3 </args>
+      <args> q[4] q[8] 4 </args>
+      <args> q[4] q[9] 5 </args>
+      <args> q[5] q[6] 1 </args>
+      <args> q[5] q[7] 2 </args>
+      <args> q[5] q[8] 3 </args>
+      <args> q[5] q[9] 4 </args>
+      <args> q[6] q[7] 1 </args>
+      <args> q[6] q[8] 2 </args>
+      <args> q[6] q[9] 3 </args>
+      <args> q[7] q[8] 1 </args>
+      <args> q[7] q[9] 2 </args>
+      <args> q[8] q[9] 1 </args>
+    </group>
+    <group>
+      <intension> or(and(eq(dist(div(%0,%1),div(%2,%3)),%4),eq(dist(mod(%0,%5),mod(%2,%6)),%7)),and(eq(dist(div(%0,%8),div(%2,%9)),%10),eq(dist(mod(%0,%11),mod(%2,%12)),%13))) </intension>
+      <args> k[0] 10 k[1] 10 1 10 10 2 10 10 2 10 10 1 </args>
+      <args> k[1] 10 k[2] 10 1 10 10 2 10 10 2 10 10 1 </args>
+      <args> k[2] 10 k[3] 10 1 10 10 2 10 10 2 10 10 1 </args>
+      <args> k[3] 10 k[4] 10 1 10 10 2 10 10 2 10 10 1 </args>
+      <args> k[4] 10 k[0] 10 1 10 10 2 10 10 2 10 10 1 </args>
+    </group>
+    <group>
+      <intension> ne(%0,%1) </intension>
+      <args> k[0] k[2] </args>
+      <args> k[0] k[3] </args>
+      <args> k[1] k[3] </args>
+      <args> k[1] k[4] </args>
+      <args> k[2] k[4] </args>
+    </group>
+    <group>
+      <intension> or(ne(%0,mod(%1,%2)),ne(%3,div(%1,%4))) </intension>
+      <args> q[0] k[0] 10 0 10 </args>
+      <args> q[0] k[1] 10 0 10 </args>
+      <args> q[0] k[2] 10 0 10 </args>
+      <args> q[0] k[3] 10 0 10 </args>
+      <args> q[0] k[4] 10 0 10 </args>
+      <args> q[1] k[0] 10 1 10 </args>
+      <args> q[1] k[1] 10 1 10 </args>
+      <args> q[1] k[2] 10 1 10 </args>
+      <args> q[1] k[3] 10 1 10 </args>
+      <args> q[1] k[4] 10 1 10 </args>
+      <args> q[2] k[0] 10 2 10 </args>
+      <args> q[2] k[1] 10 2 10 </args>
+      <args> q[2] k[2] 10 2 10 </args>
+      <args> q[2] k[3] 10 2 10 </args>
+      <args> q[2] k[4] 10 2 10 </args>
+      <args> q[3] k[0] 10 3 10 </args>
+      <args> q[3] k[1] 10 3 10 </args>
+      <args> q[3] k[2] 10 3 10 </args>
+      <args> q[3] k[3] 10 3 10 </args>
+      <args> q[3] k[4] 10 3 10 </args>
+      <args> q[4] k[0] 10 4 10 </args>
+      <args> q[4] k[1] 10 4 10 </args>
+      <args> q[4] k[2] 10 4 10 </args>
+      <args> q[4] k[3] 10 4 10 </args>
+      <args> q[4] k[4] 10 4 10 </args>
+      <args> q[5] k[0] 10 5 10 </args>
+      <args> q[5] k[1] 10 5 10 </args>
+      <args> q[5] k[2] 10 5 10 </args>
+      <args> q[5] k[3] 10 5 10 </args>
+      <args> q[5] k[4] 10 5 10 </args>
+      <args> q[6] k[0] 10 6 10 </args>
+      <args> q[6] k[1] 10 6 10 </args>
+      <args> q[6] k[2] 10 6 10 </args>
+      <args> q[6] k[3] 10 6 10 </args>
+      <args> q[6] k[4] 10 6 10 </args>
+      <args> q[7] k[0] 10 7 10 </args>
+      <args> q[7] k[1] 10 7 10 </args>
+      <args> q[7] k[2] 10 7 10 </args>
+      <args> q[7] k[3] 10 7 10 </args>
+      <args> q[7] k[4] 10 7 10 </args>
+      <args> q[8] k[0] 10 8 10 </args>
+      <args> q[8] k[1] 10 8 10 </args>
+      <args> q[8] k[2] 10 8 10 </args>
+      <args> q[8] k[3] 10 8 10 </args>
+      <args> q[8] k[4] 10 8 10 </args>
+      <args> q[9] k[0] 10 9 10 </args>
+      <args> q[9] k[1] 10 9 10 </args>
+      <args> q[9] k[2] 10 9 10 </args>
+      <args> q[9] k[3] 10 9 10 </args>
+      <args> q[9] k[4] 10 9 10 </args>
+    </group>
+  </constraints>
+</instance>

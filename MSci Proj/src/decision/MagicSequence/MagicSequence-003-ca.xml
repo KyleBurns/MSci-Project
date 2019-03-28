@@ -1,0 +1,23 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="x" size="[3]"> 0..2 </array>
+  </variables>
+  <constraints>
+    <cardinality>
+      <list> x[] </list>
+      <values> 0 1 2 </values>
+      <occurs> x[] </occurs>
+    </cardinality>
+    <block class="redundantConstraints">
+      <sum>
+        <list> x[] </list>
+        <condition> (eq,3) </condition>
+      </sum>
+      <sum>
+        <list> x[] </list>
+        <coeffs> -1 0 1 </coeffs>
+        <condition> (eq,0) </condition>
+      </sum>
+    </block>
+  </constraints>
+</instance>

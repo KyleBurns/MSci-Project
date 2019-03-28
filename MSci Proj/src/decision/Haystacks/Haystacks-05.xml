@@ -1,0 +1,73 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="x" size="[25]"> 0..4 </array>
+  </variables>
+  <constraints>
+    <group>
+      <intension> ne(%0,%1) </intension>
+      <args> x[1] x[13] </args>
+      <args> x[1] x[17] </args>
+      <args> x[1] x[24] </args>
+      <args> x[11] x[2] </args>
+      <args> x[14] x[21] </args>
+      <args> x[17] x[13] </args>
+      <args> x[20] x[14] </args>
+      <args> x[20] x[21] </args>
+      <args> x[20] x[3] </args>
+      <args> x[22] x[5] </args>
+      <args> x[3] x[14] </args>
+      <args> x[4] x[2] </args>
+      <args> x[5] x[18] </args>
+      <args> x[7] x[15] </args>
+      <args> x[7] x[23] </args>
+      <args> x[7] x[6] </args>
+      <args> x[8] x[23] </args>
+    </group>
+    <group>
+      <intension> and(ne(%0,%1),ge(add(%2,%3),2)) </intension>
+      <args> x[10] x[1] x[10] x[1] </args>
+      <args> x[10] x[13] x[10] x[13] </args>
+      <args> x[10] x[17] x[10] x[17] </args>
+      <args> x[10] x[24] x[10] x[24] </args>
+      <args> x[12] x[14] x[12] x[14] </args>
+      <args> x[12] x[20] x[12] x[20] </args>
+      <args> x[12] x[21] x[12] x[21] </args>
+      <args> x[12] x[3] x[12] x[3] </args>
+      <args> x[16] x[11] x[16] x[11] </args>
+      <args> x[16] x[2] x[16] x[2] </args>
+      <args> x[16] x[4] x[16] x[4] </args>
+      <args> x[16] x[9] x[16] x[9] </args>
+      <args> x[19] x[0] x[19] x[0] </args>
+      <args> x[19] x[18] x[19] x[18] </args>
+      <args> x[19] x[22] x[19] x[22] </args>
+      <args> x[19] x[5] x[19] x[5] </args>
+    </group>
+    <group>
+      <intension> gt(0,mul(sub(%0,%1),sub(%2,%3))) </intension>
+      <args> x[11] x[4] x[4] x[11] </args>
+      <args> x[11] x[9] x[9] x[11] </args>
+      <args> x[15] x[23] x[23] x[15] </args>
+      <args> x[17] x[24] x[24] x[17] </args>
+      <args> x[18] x[0] x[0] x[18] </args>
+      <args> x[22] x[0] x[0] x[22] </args>
+      <args> x[22] x[18] x[18] x[22] </args>
+      <args> x[24] x[13] x[13] x[24] </args>
+      <args> x[3] x[21] x[21] x[3] </args>
+      <args> x[4] x[9] x[9] x[4] </args>
+      <args> x[5] x[0] x[0] x[5] </args>
+      <args> x[6] x[15] x[15] x[6] </args>
+      <args> x[6] x[23] x[23] x[6] </args>
+      <args> x[8] x[15] x[15] x[8] </args>
+      <args> x[8] x[6] x[6] x[8] </args>
+      <args> x[8] x[7] x[7] x[8] </args>
+      <args> x[9] x[2] x[2] x[9] </args>
+    </group>
+    <group>
+      <intension> eq(%0,%1) </intension>
+      <args> x[15] x[19] </args>
+      <args> x[6] x[16] </args>
+      <args> x[7] x[12] </args>
+      <args> x[8] x[10] </args>
+    </group>
+  </constraints>
+</instance>

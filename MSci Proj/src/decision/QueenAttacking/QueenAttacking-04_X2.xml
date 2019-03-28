@@ -1,0 +1,143 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <var id="w0"> 0 1 5 </var>
+    <array id="x" size="[16]"> 0..15 </array>
+  </variables>
+  <constraints>
+    <group>
+      <intension> ne(%0,%1) </intension>
+      <args> x[0] x[2] </args>
+      <args> x[0] x[3] </args>
+      <args> x[0] x[4] </args>
+      <args> x[0] x[5] </args>
+      <args> x[0] x[6] </args>
+      <args> x[0] x[7] </args>
+      <args> x[0] x[8] </args>
+      <args> x[0] x[9] </args>
+      <args> x[0] x[10] </args>
+      <args> x[0] x[11] </args>
+      <args> x[0] x[12] </args>
+      <args> x[0] x[13] </args>
+      <args> x[0] x[14] </args>
+      <args> x[0] x[15] </args>
+      <args> x[1] x[3] </args>
+      <args> x[1] x[4] </args>
+      <args> x[1] x[5] </args>
+      <args> x[1] x[6] </args>
+      <args> x[1] x[7] </args>
+      <args> x[1] x[8] </args>
+      <args> x[1] x[9] </args>
+      <args> x[1] x[10] </args>
+      <args> x[1] x[11] </args>
+      <args> x[1] x[12] </args>
+      <args> x[1] x[13] </args>
+      <args> x[1] x[14] </args>
+      <args> x[1] x[15] </args>
+      <args> x[2] x[4] </args>
+      <args> x[2] x[5] </args>
+      <args> x[2] x[6] </args>
+      <args> x[2] x[7] </args>
+      <args> x[2] x[8] </args>
+      <args> x[2] x[9] </args>
+      <args> x[2] x[10] </args>
+      <args> x[2] x[11] </args>
+      <args> x[2] x[12] </args>
+      <args> x[2] x[13] </args>
+      <args> x[2] x[14] </args>
+      <args> x[2] x[15] </args>
+      <args> x[3] x[5] </args>
+      <args> x[3] x[6] </args>
+      <args> x[3] x[7] </args>
+      <args> x[3] x[8] </args>
+      <args> x[3] x[9] </args>
+      <args> x[3] x[10] </args>
+      <args> x[3] x[11] </args>
+      <args> x[3] x[12] </args>
+      <args> x[3] x[13] </args>
+      <args> x[3] x[14] </args>
+      <args> x[3] x[15] </args>
+      <args> x[4] x[6] </args>
+      <args> x[4] x[7] </args>
+      <args> x[4] x[8] </args>
+      <args> x[4] x[9] </args>
+      <args> x[4] x[10] </args>
+      <args> x[4] x[11] </args>
+      <args> x[4] x[12] </args>
+      <args> x[4] x[13] </args>
+      <args> x[4] x[14] </args>
+      <args> x[4] x[15] </args>
+      <args> x[5] x[7] </args>
+      <args> x[5] x[8] </args>
+      <args> x[5] x[9] </args>
+      <args> x[5] x[10] </args>
+      <args> x[5] x[11] </args>
+      <args> x[5] x[12] </args>
+      <args> x[5] x[13] </args>
+      <args> x[5] x[14] </args>
+      <args> x[5] x[15] </args>
+      <args> x[6] x[8] </args>
+      <args> x[6] x[9] </args>
+      <args> x[6] x[10] </args>
+      <args> x[6] x[11] </args>
+      <args> x[6] x[12] </args>
+      <args> x[6] x[13] </args>
+      <args> x[6] x[14] </args>
+      <args> x[6] x[15] </args>
+      <args> x[7] x[9] </args>
+      <args> x[7] x[10] </args>
+      <args> x[7] x[11] </args>
+      <args> x[7] x[12] </args>
+      <args> x[7] x[13] </args>
+      <args> x[7] x[14] </args>
+      <args> x[7] x[15] </args>
+      <args> x[8] x[10] </args>
+      <args> x[8] x[11] </args>
+      <args> x[8] x[12] </args>
+      <args> x[8] x[13] </args>
+      <args> x[8] x[14] </args>
+      <args> x[8] x[15] </args>
+      <args> x[9] x[11] </args>
+      <args> x[9] x[12] </args>
+      <args> x[9] x[13] </args>
+      <args> x[9] x[14] </args>
+      <args> x[9] x[15] </args>
+      <args> x[10] x[12] </args>
+      <args> x[10] x[13] </args>
+      <args> x[10] x[14] </args>
+      <args> x[10] x[15] </args>
+      <args> x[11] x[13] </args>
+      <args> x[11] x[14] </args>
+      <args> x[11] x[15] </args>
+      <args> x[12] x[14] </args>
+      <args> x[12] x[15] </args>
+      <args> x[13] x[15] </args>
+    </group>
+    <group>
+      <intension> or(and(eq(abs(sub(div(%0,4),div(%1,4))),1),eq(abs(sub(mod(%0,4),mod(%1,4))),2)),and(eq(abs(sub(div(%0,4),div(%1,4))),2),eq(abs(sub(mod(%0,4),mod(%1,4))),1))) </intension>
+      <args> x[0] x[1] </args>
+      <args> x[1] x[2] </args>
+      <args> x[2] x[3] </args>
+      <args> x[3] x[4] </args>
+      <args> x[4] x[5] </args>
+      <args> x[5] x[6] </args>
+      <args> x[6] x[7] </args>
+      <args> x[7] x[8] </args>
+      <args> x[8] x[9] </args>
+      <args> x[9] x[10] </args>
+      <args> x[10] x[11] </args>
+      <args> x[11] x[12] </args>
+      <args> x[12] x[13] </args>
+      <args> x[13] x[14] </args>
+      <args> x[14] x[15] </args>
+    </group>
+    <group>
+      <intension> and(ne(%0,%1),or(eq(mod(%0,4),mod(%1,4)),or(eq(div(%0,4),div(%1,4)),eq(abs(sub(div(%0,4),div(%1,4))),abs(sub(mod(%0,4),mod(%1,4))))))) </intension>
+      <args> w0 x[1] </args>
+      <args> w0 x[2] </args>
+      <args> w0 x[4] </args>
+      <args> w0 x[6] </args>
+      <args> w0 x[10] </args>
+      <args> w0 x[12] </args>
+    </group>
+  </constraints>
+</instance>

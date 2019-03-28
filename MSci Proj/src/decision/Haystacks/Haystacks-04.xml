@@ -1,0 +1,46 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="x" size="[16]"> 0..3 </array>
+  </variables>
+  <constraints>
+    <group>
+      <intension> ne(%0,%1) </intension>
+      <args> x[0] x[14] </args>
+      <args> x[10] x[12] </args>
+      <args> x[11] x[3] </args>
+      <args> x[11] x[5] </args>
+      <args> x[15] x[12] </args>
+      <args> x[3] x[5] </args>
+    </group>
+    <group>
+      <intension> eq(%0,%1) </intension>
+      <args> x[0] x[9] </args>
+      <args> x[4] x[2] </args>
+      <args> x[7] x[6] </args>
+    </group>
+    <group>
+      <intension> gt(0,mul(sub(%0,%1),sub(%2,%3))) </intension>
+      <args> x[1] x[8] x[8] x[1] </args>
+      <args> x[13] x[1] x[1] x[13] </args>
+      <args> x[13] x[8] x[8] x[13] </args>
+      <args> x[15] x[10] x[10] x[15] </args>
+      <args> x[4] x[0] x[0] x[4] </args>
+      <args> x[4] x[14] x[14] x[4] </args>
+      <args> x[7] x[0] x[0] x[7] </args>
+      <args> x[7] x[14] x[14] x[7] </args>
+      <args> x[7] x[4] x[4] x[7] </args>
+    </group>
+    <group>
+      <intension> and(ne(%0,%1),ge(add(%2,%3),2)) </intension>
+      <args> x[2] x[1] x[2] x[1] </args>
+      <args> x[2] x[13] x[2] x[13] </args>
+      <args> x[2] x[8] x[2] x[8] </args>
+      <args> x[6] x[10] x[6] x[10] </args>
+      <args> x[6] x[12] x[6] x[12] </args>
+      <args> x[6] x[15] x[6] x[15] </args>
+      <args> x[9] x[11] x[9] x[11] </args>
+      <args> x[9] x[3] x[9] x[3] </args>
+      <args> x[9] x[5] x[9] x[5] </args>
+    </group>
+  </constraints>
+</instance>

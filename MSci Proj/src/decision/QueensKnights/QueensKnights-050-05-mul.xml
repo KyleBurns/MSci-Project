@@ -1,0 +1,1505 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="q" size="[50]"> 0..49 </array>
+    <array id="k" size="[5]"> 0..2499 </array>
+  </variables>
+  <constraints>
+    <group>
+      <intension> and(ne(%0,%1),ne(dist(%0,%1),%2)) </intension>
+      <args> q[0] q[1] 1 </args>
+      <args> q[0] q[2] 2 </args>
+      <args> q[0] q[3] 3 </args>
+      <args> q[0] q[4] 4 </args>
+      <args> q[0] q[5] 5 </args>
+      <args> q[0] q[6] 6 </args>
+      <args> q[0] q[7] 7 </args>
+      <args> q[0] q[8] 8 </args>
+      <args> q[0] q[9] 9 </args>
+      <args> q[0] q[10] 10 </args>
+      <args> q[0] q[11] 11 </args>
+      <args> q[0] q[12] 12 </args>
+      <args> q[0] q[13] 13 </args>
+      <args> q[0] q[14] 14 </args>
+      <args> q[0] q[15] 15 </args>
+      <args> q[0] q[16] 16 </args>
+      <args> q[0] q[17] 17 </args>
+      <args> q[0] q[18] 18 </args>
+      <args> q[0] q[19] 19 </args>
+      <args> q[0] q[20] 20 </args>
+      <args> q[0] q[21] 21 </args>
+      <args> q[0] q[22] 22 </args>
+      <args> q[0] q[23] 23 </args>
+      <args> q[0] q[24] 24 </args>
+      <args> q[0] q[25] 25 </args>
+      <args> q[0] q[26] 26 </args>
+      <args> q[0] q[27] 27 </args>
+      <args> q[0] q[28] 28 </args>
+      <args> q[0] q[29] 29 </args>
+      <args> q[0] q[30] 30 </args>
+      <args> q[0] q[31] 31 </args>
+      <args> q[0] q[32] 32 </args>
+      <args> q[0] q[33] 33 </args>
+      <args> q[0] q[34] 34 </args>
+      <args> q[0] q[35] 35 </args>
+      <args> q[0] q[36] 36 </args>
+      <args> q[0] q[37] 37 </args>
+      <args> q[0] q[38] 38 </args>
+      <args> q[0] q[39] 39 </args>
+      <args> q[0] q[40] 40 </args>
+      <args> q[0] q[41] 41 </args>
+      <args> q[0] q[42] 42 </args>
+      <args> q[0] q[43] 43 </args>
+      <args> q[0] q[44] 44 </args>
+      <args> q[0] q[45] 45 </args>
+      <args> q[0] q[46] 46 </args>
+      <args> q[0] q[47] 47 </args>
+      <args> q[0] q[48] 48 </args>
+      <args> q[0] q[49] 49 </args>
+      <args> q[1] q[2] 1 </args>
+      <args> q[1] q[3] 2 </args>
+      <args> q[1] q[4] 3 </args>
+      <args> q[1] q[5] 4 </args>
+      <args> q[1] q[6] 5 </args>
+      <args> q[1] q[7] 6 </args>
+      <args> q[1] q[8] 7 </args>
+      <args> q[1] q[9] 8 </args>
+      <args> q[1] q[10] 9 </args>
+      <args> q[1] q[11] 10 </args>
+      <args> q[1] q[12] 11 </args>
+      <args> q[1] q[13] 12 </args>
+      <args> q[1] q[14] 13 </args>
+      <args> q[1] q[15] 14 </args>
+      <args> q[1] q[16] 15 </args>
+      <args> q[1] q[17] 16 </args>
+      <args> q[1] q[18] 17 </args>
+      <args> q[1] q[19] 18 </args>
+      <args> q[1] q[20] 19 </args>
+      <args> q[1] q[21] 20 </args>
+      <args> q[1] q[22] 21 </args>
+      <args> q[1] q[23] 22 </args>
+      <args> q[1] q[24] 23 </args>
+      <args> q[1] q[25] 24 </args>
+      <args> q[1] q[26] 25 </args>
+      <args> q[1] q[27] 26 </args>
+      <args> q[1] q[28] 27 </args>
+      <args> q[1] q[29] 28 </args>
+      <args> q[1] q[30] 29 </args>
+      <args> q[1] q[31] 30 </args>
+      <args> q[1] q[32] 31 </args>
+      <args> q[1] q[33] 32 </args>
+      <args> q[1] q[34] 33 </args>
+      <args> q[1] q[35] 34 </args>
+      <args> q[1] q[36] 35 </args>
+      <args> q[1] q[37] 36 </args>
+      <args> q[1] q[38] 37 </args>
+      <args> q[1] q[39] 38 </args>
+      <args> q[1] q[40] 39 </args>
+      <args> q[1] q[41] 40 </args>
+      <args> q[1] q[42] 41 </args>
+      <args> q[1] q[43] 42 </args>
+      <args> q[1] q[44] 43 </args>
+      <args> q[1] q[45] 44 </args>
+      <args> q[1] q[46] 45 </args>
+      <args> q[1] q[47] 46 </args>
+      <args> q[1] q[48] 47 </args>
+      <args> q[1] q[49] 48 </args>
+      <args> q[2] q[3] 1 </args>
+      <args> q[2] q[4] 2 </args>
+      <args> q[2] q[5] 3 </args>
+      <args> q[2] q[6] 4 </args>
+      <args> q[2] q[7] 5 </args>
+      <args> q[2] q[8] 6 </args>
+      <args> q[2] q[9] 7 </args>
+      <args> q[2] q[10] 8 </args>
+      <args> q[2] q[11] 9 </args>
+      <args> q[2] q[12] 10 </args>
+      <args> q[2] q[13] 11 </args>
+      <args> q[2] q[14] 12 </args>
+      <args> q[2] q[15] 13 </args>
+      <args> q[2] q[16] 14 </args>
+      <args> q[2] q[17] 15 </args>
+      <args> q[2] q[18] 16 </args>
+      <args> q[2] q[19] 17 </args>
+      <args> q[2] q[20] 18 </args>
+      <args> q[2] q[21] 19 </args>
+      <args> q[2] q[22] 20 </args>
+      <args> q[2] q[23] 21 </args>
+      <args> q[2] q[24] 22 </args>
+      <args> q[2] q[25] 23 </args>
+      <args> q[2] q[26] 24 </args>
+      <args> q[2] q[27] 25 </args>
+      <args> q[2] q[28] 26 </args>
+      <args> q[2] q[29] 27 </args>
+      <args> q[2] q[30] 28 </args>
+      <args> q[2] q[31] 29 </args>
+      <args> q[2] q[32] 30 </args>
+      <args> q[2] q[33] 31 </args>
+      <args> q[2] q[34] 32 </args>
+      <args> q[2] q[35] 33 </args>
+      <args> q[2] q[36] 34 </args>
+      <args> q[2] q[37] 35 </args>
+      <args> q[2] q[38] 36 </args>
+      <args> q[2] q[39] 37 </args>
+      <args> q[2] q[40] 38 </args>
+      <args> q[2] q[41] 39 </args>
+      <args> q[2] q[42] 40 </args>
+      <args> q[2] q[43] 41 </args>
+      <args> q[2] q[44] 42 </args>
+      <args> q[2] q[45] 43 </args>
+      <args> q[2] q[46] 44 </args>
+      <args> q[2] q[47] 45 </args>
+      <args> q[2] q[48] 46 </args>
+      <args> q[2] q[49] 47 </args>
+      <args> q[3] q[4] 1 </args>
+      <args> q[3] q[5] 2 </args>
+      <args> q[3] q[6] 3 </args>
+      <args> q[3] q[7] 4 </args>
+      <args> q[3] q[8] 5 </args>
+      <args> q[3] q[9] 6 </args>
+      <args> q[3] q[10] 7 </args>
+      <args> q[3] q[11] 8 </args>
+      <args> q[3] q[12] 9 </args>
+      <args> q[3] q[13] 10 </args>
+      <args> q[3] q[14] 11 </args>
+      <args> q[3] q[15] 12 </args>
+      <args> q[3] q[16] 13 </args>
+      <args> q[3] q[17] 14 </args>
+      <args> q[3] q[18] 15 </args>
+      <args> q[3] q[19] 16 </args>
+      <args> q[3] q[20] 17 </args>
+      <args> q[3] q[21] 18 </args>
+      <args> q[3] q[22] 19 </args>
+      <args> q[3] q[23] 20 </args>
+      <args> q[3] q[24] 21 </args>
+      <args> q[3] q[25] 22 </args>
+      <args> q[3] q[26] 23 </args>
+      <args> q[3] q[27] 24 </args>
+      <args> q[3] q[28] 25 </args>
+      <args> q[3] q[29] 26 </args>
+      <args> q[3] q[30] 27 </args>
+      <args> q[3] q[31] 28 </args>
+      <args> q[3] q[32] 29 </args>
+      <args> q[3] q[33] 30 </args>
+      <args> q[3] q[34] 31 </args>
+      <args> q[3] q[35] 32 </args>
+      <args> q[3] q[36] 33 </args>
+      <args> q[3] q[37] 34 </args>
+      <args> q[3] q[38] 35 </args>
+      <args> q[3] q[39] 36 </args>
+      <args> q[3] q[40] 37 </args>
+      <args> q[3] q[41] 38 </args>
+      <args> q[3] q[42] 39 </args>
+      <args> q[3] q[43] 40 </args>
+      <args> q[3] q[44] 41 </args>
+      <args> q[3] q[45] 42 </args>
+      <args> q[3] q[46] 43 </args>
+      <args> q[3] q[47] 44 </args>
+      <args> q[3] q[48] 45 </args>
+      <args> q[3] q[49] 46 </args>
+      <args> q[4] q[5] 1 </args>
+      <args> q[4] q[6] 2 </args>
+      <args> q[4] q[7] 3 </args>
+      <args> q[4] q[8] 4 </args>
+      <args> q[4] q[9] 5 </args>
+      <args> q[4] q[10] 6 </args>
+      <args> q[4] q[11] 7 </args>
+      <args> q[4] q[12] 8 </args>
+      <args> q[4] q[13] 9 </args>
+      <args> q[4] q[14] 10 </args>
+      <args> q[4] q[15] 11 </args>
+      <args> q[4] q[16] 12 </args>
+      <args> q[4] q[17] 13 </args>
+      <args> q[4] q[18] 14 </args>
+      <args> q[4] q[19] 15 </args>
+      <args> q[4] q[20] 16 </args>
+      <args> q[4] q[21] 17 </args>
+      <args> q[4] q[22] 18 </args>
+      <args> q[4] q[23] 19 </args>
+      <args> q[4] q[24] 20 </args>
+      <args> q[4] q[25] 21 </args>
+      <args> q[4] q[26] 22 </args>
+      <args> q[4] q[27] 23 </args>
+      <args> q[4] q[28] 24 </args>
+      <args> q[4] q[29] 25 </args>
+      <args> q[4] q[30] 26 </args>
+      <args> q[4] q[31] 27 </args>
+      <args> q[4] q[32] 28 </args>
+      <args> q[4] q[33] 29 </args>
+      <args> q[4] q[34] 30 </args>
+      <args> q[4] q[35] 31 </args>
+      <args> q[4] q[36] 32 </args>
+      <args> q[4] q[37] 33 </args>
+      <args> q[4] q[38] 34 </args>
+      <args> q[4] q[39] 35 </args>
+      <args> q[4] q[40] 36 </args>
+      <args> q[4] q[41] 37 </args>
+      <args> q[4] q[42] 38 </args>
+      <args> q[4] q[43] 39 </args>
+      <args> q[4] q[44] 40 </args>
+      <args> q[4] q[45] 41 </args>
+      <args> q[4] q[46] 42 </args>
+      <args> q[4] q[47] 43 </args>
+      <args> q[4] q[48] 44 </args>
+      <args> q[4] q[49] 45 </args>
+      <args> q[5] q[6] 1 </args>
+      <args> q[5] q[7] 2 </args>
+      <args> q[5] q[8] 3 </args>
+      <args> q[5] q[9] 4 </args>
+      <args> q[5] q[10] 5 </args>
+      <args> q[5] q[11] 6 </args>
+      <args> q[5] q[12] 7 </args>
+      <args> q[5] q[13] 8 </args>
+      <args> q[5] q[14] 9 </args>
+      <args> q[5] q[15] 10 </args>
+      <args> q[5] q[16] 11 </args>
+      <args> q[5] q[17] 12 </args>
+      <args> q[5] q[18] 13 </args>
+      <args> q[5] q[19] 14 </args>
+      <args> q[5] q[20] 15 </args>
+      <args> q[5] q[21] 16 </args>
+      <args> q[5] q[22] 17 </args>
+      <args> q[5] q[23] 18 </args>
+      <args> q[5] q[24] 19 </args>
+      <args> q[5] q[25] 20 </args>
+      <args> q[5] q[26] 21 </args>
+      <args> q[5] q[27] 22 </args>
+      <args> q[5] q[28] 23 </args>
+      <args> q[5] q[29] 24 </args>
+      <args> q[5] q[30] 25 </args>
+      <args> q[5] q[31] 26 </args>
+      <args> q[5] q[32] 27 </args>
+      <args> q[5] q[33] 28 </args>
+      <args> q[5] q[34] 29 </args>
+      <args> q[5] q[35] 30 </args>
+      <args> q[5] q[36] 31 </args>
+      <args> q[5] q[37] 32 </args>
+      <args> q[5] q[38] 33 </args>
+      <args> q[5] q[39] 34 </args>
+      <args> q[5] q[40] 35 </args>
+      <args> q[5] q[41] 36 </args>
+      <args> q[5] q[42] 37 </args>
+      <args> q[5] q[43] 38 </args>
+      <args> q[5] q[44] 39 </args>
+      <args> q[5] q[45] 40 </args>
+      <args> q[5] q[46] 41 </args>
+      <args> q[5] q[47] 42 </args>
+      <args> q[5] q[48] 43 </args>
+      <args> q[5] q[49] 44 </args>
+      <args> q[6] q[7] 1 </args>
+      <args> q[6] q[8] 2 </args>
+      <args> q[6] q[9] 3 </args>
+      <args> q[6] q[10] 4 </args>
+      <args> q[6] q[11] 5 </args>
+      <args> q[6] q[12] 6 </args>
+      <args> q[6] q[13] 7 </args>
+      <args> q[6] q[14] 8 </args>
+      <args> q[6] q[15] 9 </args>
+      <args> q[6] q[16] 10 </args>
+      <args> q[6] q[17] 11 </args>
+      <args> q[6] q[18] 12 </args>
+      <args> q[6] q[19] 13 </args>
+      <args> q[6] q[20] 14 </args>
+      <args> q[6] q[21] 15 </args>
+      <args> q[6] q[22] 16 </args>
+      <args> q[6] q[23] 17 </args>
+      <args> q[6] q[24] 18 </args>
+      <args> q[6] q[25] 19 </args>
+      <args> q[6] q[26] 20 </args>
+      <args> q[6] q[27] 21 </args>
+      <args> q[6] q[28] 22 </args>
+      <args> q[6] q[29] 23 </args>
+      <args> q[6] q[30] 24 </args>
+      <args> q[6] q[31] 25 </args>
+      <args> q[6] q[32] 26 </args>
+      <args> q[6] q[33] 27 </args>
+      <args> q[6] q[34] 28 </args>
+      <args> q[6] q[35] 29 </args>
+      <args> q[6] q[36] 30 </args>
+      <args> q[6] q[37] 31 </args>
+      <args> q[6] q[38] 32 </args>
+      <args> q[6] q[39] 33 </args>
+      <args> q[6] q[40] 34 </args>
+      <args> q[6] q[41] 35 </args>
+      <args> q[6] q[42] 36 </args>
+      <args> q[6] q[43] 37 </args>
+      <args> q[6] q[44] 38 </args>
+      <args> q[6] q[45] 39 </args>
+      <args> q[6] q[46] 40 </args>
+      <args> q[6] q[47] 41 </args>
+      <args> q[6] q[48] 42 </args>
+      <args> q[6] q[49] 43 </args>
+      <args> q[7] q[8] 1 </args>
+      <args> q[7] q[9] 2 </args>
+      <args> q[7] q[10] 3 </args>
+      <args> q[7] q[11] 4 </args>
+      <args> q[7] q[12] 5 </args>
+      <args> q[7] q[13] 6 </args>
+      <args> q[7] q[14] 7 </args>
+      <args> q[7] q[15] 8 </args>
+      <args> q[7] q[16] 9 </args>
+      <args> q[7] q[17] 10 </args>
+      <args> q[7] q[18] 11 </args>
+      <args> q[7] q[19] 12 </args>
+      <args> q[7] q[20] 13 </args>
+      <args> q[7] q[21] 14 </args>
+      <args> q[7] q[22] 15 </args>
+      <args> q[7] q[23] 16 </args>
+      <args> q[7] q[24] 17 </args>
+      <args> q[7] q[25] 18 </args>
+      <args> q[7] q[26] 19 </args>
+      <args> q[7] q[27] 20 </args>
+      <args> q[7] q[28] 21 </args>
+      <args> q[7] q[29] 22 </args>
+      <args> q[7] q[30] 23 </args>
+      <args> q[7] q[31] 24 </args>
+      <args> q[7] q[32] 25 </args>
+      <args> q[7] q[33] 26 </args>
+      <args> q[7] q[34] 27 </args>
+      <args> q[7] q[35] 28 </args>
+      <args> q[7] q[36] 29 </args>
+      <args> q[7] q[37] 30 </args>
+      <args> q[7] q[38] 31 </args>
+      <args> q[7] q[39] 32 </args>
+      <args> q[7] q[40] 33 </args>
+      <args> q[7] q[41] 34 </args>
+      <args> q[7] q[42] 35 </args>
+      <args> q[7] q[43] 36 </args>
+      <args> q[7] q[44] 37 </args>
+      <args> q[7] q[45] 38 </args>
+      <args> q[7] q[46] 39 </args>
+      <args> q[7] q[47] 40 </args>
+      <args> q[7] q[48] 41 </args>
+      <args> q[7] q[49] 42 </args>
+      <args> q[8] q[9] 1 </args>
+      <args> q[8] q[10] 2 </args>
+      <args> q[8] q[11] 3 </args>
+      <args> q[8] q[12] 4 </args>
+      <args> q[8] q[13] 5 </args>
+      <args> q[8] q[14] 6 </args>
+      <args> q[8] q[15] 7 </args>
+      <args> q[8] q[16] 8 </args>
+      <args> q[8] q[17] 9 </args>
+      <args> q[8] q[18] 10 </args>
+      <args> q[8] q[19] 11 </args>
+      <args> q[8] q[20] 12 </args>
+      <args> q[8] q[21] 13 </args>
+      <args> q[8] q[22] 14 </args>
+      <args> q[8] q[23] 15 </args>
+      <args> q[8] q[24] 16 </args>
+      <args> q[8] q[25] 17 </args>
+      <args> q[8] q[26] 18 </args>
+      <args> q[8] q[27] 19 </args>
+      <args> q[8] q[28] 20 </args>
+      <args> q[8] q[29] 21 </args>
+      <args> q[8] q[30] 22 </args>
+      <args> q[8] q[31] 23 </args>
+      <args> q[8] q[32] 24 </args>
+      <args> q[8] q[33] 25 </args>
+      <args> q[8] q[34] 26 </args>
+      <args> q[8] q[35] 27 </args>
+      <args> q[8] q[36] 28 </args>
+      <args> q[8] q[37] 29 </args>
+      <args> q[8] q[38] 30 </args>
+      <args> q[8] q[39] 31 </args>
+      <args> q[8] q[40] 32 </args>
+      <args> q[8] q[41] 33 </args>
+      <args> q[8] q[42] 34 </args>
+      <args> q[8] q[43] 35 </args>
+      <args> q[8] q[44] 36 </args>
+      <args> q[8] q[45] 37 </args>
+      <args> q[8] q[46] 38 </args>
+      <args> q[8] q[47] 39 </args>
+      <args> q[8] q[48] 40 </args>
+      <args> q[8] q[49] 41 </args>
+      <args> q[9] q[10] 1 </args>
+      <args> q[9] q[11] 2 </args>
+      <args> q[9] q[12] 3 </args>
+      <args> q[9] q[13] 4 </args>
+      <args> q[9] q[14] 5 </args>
+      <args> q[9] q[15] 6 </args>
+      <args> q[9] q[16] 7 </args>
+      <args> q[9] q[17] 8 </args>
+      <args> q[9] q[18] 9 </args>
+      <args> q[9] q[19] 10 </args>
+      <args> q[9] q[20] 11 </args>
+      <args> q[9] q[21] 12 </args>
+      <args> q[9] q[22] 13 </args>
+      <args> q[9] q[23] 14 </args>
+      <args> q[9] q[24] 15 </args>
+      <args> q[9] q[25] 16 </args>
+      <args> q[9] q[26] 17 </args>
+      <args> q[9] q[27] 18 </args>
+      <args> q[9] q[28] 19 </args>
+      <args> q[9] q[29] 20 </args>
+      <args> q[9] q[30] 21 </args>
+      <args> q[9] q[31] 22 </args>
+      <args> q[9] q[32] 23 </args>
+      <args> q[9] q[33] 24 </args>
+      <args> q[9] q[34] 25 </args>
+      <args> q[9] q[35] 26 </args>
+      <args> q[9] q[36] 27 </args>
+      <args> q[9] q[37] 28 </args>
+      <args> q[9] q[38] 29 </args>
+      <args> q[9] q[39] 30 </args>
+      <args> q[9] q[40] 31 </args>
+      <args> q[9] q[41] 32 </args>
+      <args> q[9] q[42] 33 </args>
+      <args> q[9] q[43] 34 </args>
+      <args> q[9] q[44] 35 </args>
+      <args> q[9] q[45] 36 </args>
+      <args> q[9] q[46] 37 </args>
+      <args> q[9] q[47] 38 </args>
+      <args> q[9] q[48] 39 </args>
+      <args> q[9] q[49] 40 </args>
+      <args> q[10] q[11] 1 </args>
+      <args> q[10] q[12] 2 </args>
+      <args> q[10] q[13] 3 </args>
+      <args> q[10] q[14] 4 </args>
+      <args> q[10] q[15] 5 </args>
+      <args> q[10] q[16] 6 </args>
+      <args> q[10] q[17] 7 </args>
+      <args> q[10] q[18] 8 </args>
+      <args> q[10] q[19] 9 </args>
+      <args> q[10] q[20] 10 </args>
+      <args> q[10] q[21] 11 </args>
+      <args> q[10] q[22] 12 </args>
+      <args> q[10] q[23] 13 </args>
+      <args> q[10] q[24] 14 </args>
+      <args> q[10] q[25] 15 </args>
+      <args> q[10] q[26] 16 </args>
+      <args> q[10] q[27] 17 </args>
+      <args> q[10] q[28] 18 </args>
+      <args> q[10] q[29] 19 </args>
+      <args> q[10] q[30] 20 </args>
+      <args> q[10] q[31] 21 </args>
+      <args> q[10] q[32] 22 </args>
+      <args> q[10] q[33] 23 </args>
+      <args> q[10] q[34] 24 </args>
+      <args> q[10] q[35] 25 </args>
+      <args> q[10] q[36] 26 </args>
+      <args> q[10] q[37] 27 </args>
+      <args> q[10] q[38] 28 </args>
+      <args> q[10] q[39] 29 </args>
+      <args> q[10] q[40] 30 </args>
+      <args> q[10] q[41] 31 </args>
+      <args> q[10] q[42] 32 </args>
+      <args> q[10] q[43] 33 </args>
+      <args> q[10] q[44] 34 </args>
+      <args> q[10] q[45] 35 </args>
+      <args> q[10] q[46] 36 </args>
+      <args> q[10] q[47] 37 </args>
+      <args> q[10] q[48] 38 </args>
+      <args> q[10] q[49] 39 </args>
+      <args> q[11] q[12] 1 </args>
+      <args> q[11] q[13] 2 </args>
+      <args> q[11] q[14] 3 </args>
+      <args> q[11] q[15] 4 </args>
+      <args> q[11] q[16] 5 </args>
+      <args> q[11] q[17] 6 </args>
+      <args> q[11] q[18] 7 </args>
+      <args> q[11] q[19] 8 </args>
+      <args> q[11] q[20] 9 </args>
+      <args> q[11] q[21] 10 </args>
+      <args> q[11] q[22] 11 </args>
+      <args> q[11] q[23] 12 </args>
+      <args> q[11] q[24] 13 </args>
+      <args> q[11] q[25] 14 </args>
+      <args> q[11] q[26] 15 </args>
+      <args> q[11] q[27] 16 </args>
+      <args> q[11] q[28] 17 </args>
+      <args> q[11] q[29] 18 </args>
+      <args> q[11] q[30] 19 </args>
+      <args> q[11] q[31] 20 </args>
+      <args> q[11] q[32] 21 </args>
+      <args> q[11] q[33] 22 </args>
+      <args> q[11] q[34] 23 </args>
+      <args> q[11] q[35] 24 </args>
+      <args> q[11] q[36] 25 </args>
+      <args> q[11] q[37] 26 </args>
+      <args> q[11] q[38] 27 </args>
+      <args> q[11] q[39] 28 </args>
+      <args> q[11] q[40] 29 </args>
+      <args> q[11] q[41] 30 </args>
+      <args> q[11] q[42] 31 </args>
+      <args> q[11] q[43] 32 </args>
+      <args> q[11] q[44] 33 </args>
+      <args> q[11] q[45] 34 </args>
+      <args> q[11] q[46] 35 </args>
+      <args> q[11] q[47] 36 </args>
+      <args> q[11] q[48] 37 </args>
+      <args> q[11] q[49] 38 </args>
+      <args> q[12] q[13] 1 </args>
+      <args> q[12] q[14] 2 </args>
+      <args> q[12] q[15] 3 </args>
+      <args> q[12] q[16] 4 </args>
+      <args> q[12] q[17] 5 </args>
+      <args> q[12] q[18] 6 </args>
+      <args> q[12] q[19] 7 </args>
+      <args> q[12] q[20] 8 </args>
+      <args> q[12] q[21] 9 </args>
+      <args> q[12] q[22] 10 </args>
+      <args> q[12] q[23] 11 </args>
+      <args> q[12] q[24] 12 </args>
+      <args> q[12] q[25] 13 </args>
+      <args> q[12] q[26] 14 </args>
+      <args> q[12] q[27] 15 </args>
+      <args> q[12] q[28] 16 </args>
+      <args> q[12] q[29] 17 </args>
+      <args> q[12] q[30] 18 </args>
+      <args> q[12] q[31] 19 </args>
+      <args> q[12] q[32] 20 </args>
+      <args> q[12] q[33] 21 </args>
+      <args> q[12] q[34] 22 </args>
+      <args> q[12] q[35] 23 </args>
+      <args> q[12] q[36] 24 </args>
+      <args> q[12] q[37] 25 </args>
+      <args> q[12] q[38] 26 </args>
+      <args> q[12] q[39] 27 </args>
+      <args> q[12] q[40] 28 </args>
+      <args> q[12] q[41] 29 </args>
+      <args> q[12] q[42] 30 </args>
+      <args> q[12] q[43] 31 </args>
+      <args> q[12] q[44] 32 </args>
+      <args> q[12] q[45] 33 </args>
+      <args> q[12] q[46] 34 </args>
+      <args> q[12] q[47] 35 </args>
+      <args> q[12] q[48] 36 </args>
+      <args> q[12] q[49] 37 </args>
+      <args> q[13] q[14] 1 </args>
+      <args> q[13] q[15] 2 </args>
+      <args> q[13] q[16] 3 </args>
+      <args> q[13] q[17] 4 </args>
+      <args> q[13] q[18] 5 </args>
+      <args> q[13] q[19] 6 </args>
+      <args> q[13] q[20] 7 </args>
+      <args> q[13] q[21] 8 </args>
+      <args> q[13] q[22] 9 </args>
+      <args> q[13] q[23] 10 </args>
+      <args> q[13] q[24] 11 </args>
+      <args> q[13] q[25] 12 </args>
+      <args> q[13] q[26] 13 </args>
+      <args> q[13] q[27] 14 </args>
+      <args> q[13] q[28] 15 </args>
+      <args> q[13] q[29] 16 </args>
+      <args> q[13] q[30] 17 </args>
+      <args> q[13] q[31] 18 </args>
+      <args> q[13] q[32] 19 </args>
+      <args> q[13] q[33] 20 </args>
+      <args> q[13] q[34] 21 </args>
+      <args> q[13] q[35] 22 </args>
+      <args> q[13] q[36] 23 </args>
+      <args> q[13] q[37] 24 </args>
+      <args> q[13] q[38] 25 </args>
+      <args> q[13] q[39] 26 </args>
+      <args> q[13] q[40] 27 </args>
+      <args> q[13] q[41] 28 </args>
+      <args> q[13] q[42] 29 </args>
+      <args> q[13] q[43] 30 </args>
+      <args> q[13] q[44] 31 </args>
+      <args> q[13] q[45] 32 </args>
+      <args> q[13] q[46] 33 </args>
+      <args> q[13] q[47] 34 </args>
+      <args> q[13] q[48] 35 </args>
+      <args> q[13] q[49] 36 </args>
+      <args> q[14] q[15] 1 </args>
+      <args> q[14] q[16] 2 </args>
+      <args> q[14] q[17] 3 </args>
+      <args> q[14] q[18] 4 </args>
+      <args> q[14] q[19] 5 </args>
+      <args> q[14] q[20] 6 </args>
+      <args> q[14] q[21] 7 </args>
+      <args> q[14] q[22] 8 </args>
+      <args> q[14] q[23] 9 </args>
+      <args> q[14] q[24] 10 </args>
+      <args> q[14] q[25] 11 </args>
+      <args> q[14] q[26] 12 </args>
+      <args> q[14] q[27] 13 </args>
+      <args> q[14] q[28] 14 </args>
+      <args> q[14] q[29] 15 </args>
+      <args> q[14] q[30] 16 </args>
+      <args> q[14] q[31] 17 </args>
+      <args> q[14] q[32] 18 </args>
+      <args> q[14] q[33] 19 </args>
+      <args> q[14] q[34] 20 </args>
+      <args> q[14] q[35] 21 </args>
+      <args> q[14] q[36] 22 </args>
+      <args> q[14] q[37] 23 </args>
+      <args> q[14] q[38] 24 </args>
+      <args> q[14] q[39] 25 </args>
+      <args> q[14] q[40] 26 </args>
+      <args> q[14] q[41] 27 </args>
+      <args> q[14] q[42] 28 </args>
+      <args> q[14] q[43] 29 </args>
+      <args> q[14] q[44] 30 </args>
+      <args> q[14] q[45] 31 </args>
+      <args> q[14] q[46] 32 </args>
+      <args> q[14] q[47] 33 </args>
+      <args> q[14] q[48] 34 </args>
+      <args> q[14] q[49] 35 </args>
+      <args> q[15] q[16] 1 </args>
+      <args> q[15] q[17] 2 </args>
+      <args> q[15] q[18] 3 </args>
+      <args> q[15] q[19] 4 </args>
+      <args> q[15] q[20] 5 </args>
+      <args> q[15] q[21] 6 </args>
+      <args> q[15] q[22] 7 </args>
+      <args> q[15] q[23] 8 </args>
+      <args> q[15] q[24] 9 </args>
+      <args> q[15] q[25] 10 </args>
+      <args> q[15] q[26] 11 </args>
+      <args> q[15] q[27] 12 </args>
+      <args> q[15] q[28] 13 </args>
+      <args> q[15] q[29] 14 </args>
+      <args> q[15] q[30] 15 </args>
+      <args> q[15] q[31] 16 </args>
+      <args> q[15] q[32] 17 </args>
+      <args> q[15] q[33] 18 </args>
+      <args> q[15] q[34] 19 </args>
+      <args> q[15] q[35] 20 </args>
+      <args> q[15] q[36] 21 </args>
+      <args> q[15] q[37] 22 </args>
+      <args> q[15] q[38] 23 </args>
+      <args> q[15] q[39] 24 </args>
+      <args> q[15] q[40] 25 </args>
+      <args> q[15] q[41] 26 </args>
+      <args> q[15] q[42] 27 </args>
+      <args> q[15] q[43] 28 </args>
+      <args> q[15] q[44] 29 </args>
+      <args> q[15] q[45] 30 </args>
+      <args> q[15] q[46] 31 </args>
+      <args> q[15] q[47] 32 </args>
+      <args> q[15] q[48] 33 </args>
+      <args> q[15] q[49] 34 </args>
+      <args> q[16] q[17] 1 </args>
+      <args> q[16] q[18] 2 </args>
+      <args> q[16] q[19] 3 </args>
+      <args> q[16] q[20] 4 </args>
+      <args> q[16] q[21] 5 </args>
+      <args> q[16] q[22] 6 </args>
+      <args> q[16] q[23] 7 </args>
+      <args> q[16] q[24] 8 </args>
+      <args> q[16] q[25] 9 </args>
+      <args> q[16] q[26] 10 </args>
+      <args> q[16] q[27] 11 </args>
+      <args> q[16] q[28] 12 </args>
+      <args> q[16] q[29] 13 </args>
+      <args> q[16] q[30] 14 </args>
+      <args> q[16] q[31] 15 </args>
+      <args> q[16] q[32] 16 </args>
+      <args> q[16] q[33] 17 </args>
+      <args> q[16] q[34] 18 </args>
+      <args> q[16] q[35] 19 </args>
+      <args> q[16] q[36] 20 </args>
+      <args> q[16] q[37] 21 </args>
+      <args> q[16] q[38] 22 </args>
+      <args> q[16] q[39] 23 </args>
+      <args> q[16] q[40] 24 </args>
+      <args> q[16] q[41] 25 </args>
+      <args> q[16] q[42] 26 </args>
+      <args> q[16] q[43] 27 </args>
+      <args> q[16] q[44] 28 </args>
+      <args> q[16] q[45] 29 </args>
+      <args> q[16] q[46] 30 </args>
+      <args> q[16] q[47] 31 </args>
+      <args> q[16] q[48] 32 </args>
+      <args> q[16] q[49] 33 </args>
+      <args> q[17] q[18] 1 </args>
+      <args> q[17] q[19] 2 </args>
+      <args> q[17] q[20] 3 </args>
+      <args> q[17] q[21] 4 </args>
+      <args> q[17] q[22] 5 </args>
+      <args> q[17] q[23] 6 </args>
+      <args> q[17] q[24] 7 </args>
+      <args> q[17] q[25] 8 </args>
+      <args> q[17] q[26] 9 </args>
+      <args> q[17] q[27] 10 </args>
+      <args> q[17] q[28] 11 </args>
+      <args> q[17] q[29] 12 </args>
+      <args> q[17] q[30] 13 </args>
+      <args> q[17] q[31] 14 </args>
+      <args> q[17] q[32] 15 </args>
+      <args> q[17] q[33] 16 </args>
+      <args> q[17] q[34] 17 </args>
+      <args> q[17] q[35] 18 </args>
+      <args> q[17] q[36] 19 </args>
+      <args> q[17] q[37] 20 </args>
+      <args> q[17] q[38] 21 </args>
+      <args> q[17] q[39] 22 </args>
+      <args> q[17] q[40] 23 </args>
+      <args> q[17] q[41] 24 </args>
+      <args> q[17] q[42] 25 </args>
+      <args> q[17] q[43] 26 </args>
+      <args> q[17] q[44] 27 </args>
+      <args> q[17] q[45] 28 </args>
+      <args> q[17] q[46] 29 </args>
+      <args> q[17] q[47] 30 </args>
+      <args> q[17] q[48] 31 </args>
+      <args> q[17] q[49] 32 </args>
+      <args> q[18] q[19] 1 </args>
+      <args> q[18] q[20] 2 </args>
+      <args> q[18] q[21] 3 </args>
+      <args> q[18] q[22] 4 </args>
+      <args> q[18] q[23] 5 </args>
+      <args> q[18] q[24] 6 </args>
+      <args> q[18] q[25] 7 </args>
+      <args> q[18] q[26] 8 </args>
+      <args> q[18] q[27] 9 </args>
+      <args> q[18] q[28] 10 </args>
+      <args> q[18] q[29] 11 </args>
+      <args> q[18] q[30] 12 </args>
+      <args> q[18] q[31] 13 </args>
+      <args> q[18] q[32] 14 </args>
+      <args> q[18] q[33] 15 </args>
+      <args> q[18] q[34] 16 </args>
+      <args> q[18] q[35] 17 </args>
+      <args> q[18] q[36] 18 </args>
+      <args> q[18] q[37] 19 </args>
+      <args> q[18] q[38] 20 </args>
+      <args> q[18] q[39] 21 </args>
+      <args> q[18] q[40] 22 </args>
+      <args> q[18] q[41] 23 </args>
+      <args> q[18] q[42] 24 </args>
+      <args> q[18] q[43] 25 </args>
+      <args> q[18] q[44] 26 </args>
+      <args> q[18] q[45] 27 </args>
+      <args> q[18] q[46] 28 </args>
+      <args> q[18] q[47] 29 </args>
+      <args> q[18] q[48] 30 </args>
+      <args> q[18] q[49] 31 </args>
+      <args> q[19] q[20] 1 </args>
+      <args> q[19] q[21] 2 </args>
+      <args> q[19] q[22] 3 </args>
+      <args> q[19] q[23] 4 </args>
+      <args> q[19] q[24] 5 </args>
+      <args> q[19] q[25] 6 </args>
+      <args> q[19] q[26] 7 </args>
+      <args> q[19] q[27] 8 </args>
+      <args> q[19] q[28] 9 </args>
+      <args> q[19] q[29] 10 </args>
+      <args> q[19] q[30] 11 </args>
+      <args> q[19] q[31] 12 </args>
+      <args> q[19] q[32] 13 </args>
+      <args> q[19] q[33] 14 </args>
+      <args> q[19] q[34] 15 </args>
+      <args> q[19] q[35] 16 </args>
+      <args> q[19] q[36] 17 </args>
+      <args> q[19] q[37] 18 </args>
+      <args> q[19] q[38] 19 </args>
+      <args> q[19] q[39] 20 </args>
+      <args> q[19] q[40] 21 </args>
+      <args> q[19] q[41] 22 </args>
+      <args> q[19] q[42] 23 </args>
+      <args> q[19] q[43] 24 </args>
+      <args> q[19] q[44] 25 </args>
+      <args> q[19] q[45] 26 </args>
+      <args> q[19] q[46] 27 </args>
+      <args> q[19] q[47] 28 </args>
+      <args> q[19] q[48] 29 </args>
+      <args> q[19] q[49] 30 </args>
+      <args> q[20] q[21] 1 </args>
+      <args> q[20] q[22] 2 </args>
+      <args> q[20] q[23] 3 </args>
+      <args> q[20] q[24] 4 </args>
+      <args> q[20] q[25] 5 </args>
+      <args> q[20] q[26] 6 </args>
+      <args> q[20] q[27] 7 </args>
+      <args> q[20] q[28] 8 </args>
+      <args> q[20] q[29] 9 </args>
+      <args> q[20] q[30] 10 </args>
+      <args> q[20] q[31] 11 </args>
+      <args> q[20] q[32] 12 </args>
+      <args> q[20] q[33] 13 </args>
+      <args> q[20] q[34] 14 </args>
+      <args> q[20] q[35] 15 </args>
+      <args> q[20] q[36] 16 </args>
+      <args> q[20] q[37] 17 </args>
+      <args> q[20] q[38] 18 </args>
+      <args> q[20] q[39] 19 </args>
+      <args> q[20] q[40] 20 </args>
+      <args> q[20] q[41] 21 </args>
+      <args> q[20] q[42] 22 </args>
+      <args> q[20] q[43] 23 </args>
+      <args> q[20] q[44] 24 </args>
+      <args> q[20] q[45] 25 </args>
+      <args> q[20] q[46] 26 </args>
+      <args> q[20] q[47] 27 </args>
+      <args> q[20] q[48] 28 </args>
+      <args> q[20] q[49] 29 </args>
+      <args> q[21] q[22] 1 </args>
+      <args> q[21] q[23] 2 </args>
+      <args> q[21] q[24] 3 </args>
+      <args> q[21] q[25] 4 </args>
+      <args> q[21] q[26] 5 </args>
+      <args> q[21] q[27] 6 </args>
+      <args> q[21] q[28] 7 </args>
+      <args> q[21] q[29] 8 </args>
+      <args> q[21] q[30] 9 </args>
+      <args> q[21] q[31] 10 </args>
+      <args> q[21] q[32] 11 </args>
+      <args> q[21] q[33] 12 </args>
+      <args> q[21] q[34] 13 </args>
+      <args> q[21] q[35] 14 </args>
+      <args> q[21] q[36] 15 </args>
+      <args> q[21] q[37] 16 </args>
+      <args> q[21] q[38] 17 </args>
+      <args> q[21] q[39] 18 </args>
+      <args> q[21] q[40] 19 </args>
+      <args> q[21] q[41] 20 </args>
+      <args> q[21] q[42] 21 </args>
+      <args> q[21] q[43] 22 </args>
+      <args> q[21] q[44] 23 </args>
+      <args> q[21] q[45] 24 </args>
+      <args> q[21] q[46] 25 </args>
+      <args> q[21] q[47] 26 </args>
+      <args> q[21] q[48] 27 </args>
+      <args> q[21] q[49] 28 </args>
+      <args> q[22] q[23] 1 </args>
+      <args> q[22] q[24] 2 </args>
+      <args> q[22] q[25] 3 </args>
+      <args> q[22] q[26] 4 </args>
+      <args> q[22] q[27] 5 </args>
+      <args> q[22] q[28] 6 </args>
+      <args> q[22] q[29] 7 </args>
+      <args> q[22] q[30] 8 </args>
+      <args> q[22] q[31] 9 </args>
+      <args> q[22] q[32] 10 </args>
+      <args> q[22] q[33] 11 </args>
+      <args> q[22] q[34] 12 </args>
+      <args> q[22] q[35] 13 </args>
+      <args> q[22] q[36] 14 </args>
+      <args> q[22] q[37] 15 </args>
+      <args> q[22] q[38] 16 </args>
+      <args> q[22] q[39] 17 </args>
+      <args> q[22] q[40] 18 </args>
+      <args> q[22] q[41] 19 </args>
+      <args> q[22] q[42] 20 </args>
+      <args> q[22] q[43] 21 </args>
+      <args> q[22] q[44] 22 </args>
+      <args> q[22] q[45] 23 </args>
+      <args> q[22] q[46] 24 </args>
+      <args> q[22] q[47] 25 </args>
+      <args> q[22] q[48] 26 </args>
+      <args> q[22] q[49] 27 </args>
+      <args> q[23] q[24] 1 </args>
+      <args> q[23] q[25] 2 </args>
+      <args> q[23] q[26] 3 </args>
+      <args> q[23] q[27] 4 </args>
+      <args> q[23] q[28] 5 </args>
+      <args> q[23] q[29] 6 </args>
+      <args> q[23] q[30] 7 </args>
+      <args> q[23] q[31] 8 </args>
+      <args> q[23] q[32] 9 </args>
+      <args> q[23] q[33] 10 </args>
+      <args> q[23] q[34] 11 </args>
+      <args> q[23] q[35] 12 </args>
+      <args> q[23] q[36] 13 </args>
+      <args> q[23] q[37] 14 </args>
+      <args> q[23] q[38] 15 </args>
+      <args> q[23] q[39] 16 </args>
+      <args> q[23] q[40] 17 </args>
+      <args> q[23] q[41] 18 </args>
+      <args> q[23] q[42] 19 </args>
+      <args> q[23] q[43] 20 </args>
+      <args> q[23] q[44] 21 </args>
+      <args> q[23] q[45] 22 </args>
+      <args> q[23] q[46] 23 </args>
+      <args> q[23] q[47] 24 </args>
+      <args> q[23] q[48] 25 </args>
+      <args> q[23] q[49] 26 </args>
+      <args> q[24] q[25] 1 </args>
+      <args> q[24] q[26] 2 </args>
+      <args> q[24] q[27] 3 </args>
+      <args> q[24] q[28] 4 </args>
+      <args> q[24] q[29] 5 </args>
+      <args> q[24] q[30] 6 </args>
+      <args> q[24] q[31] 7 </args>
+      <args> q[24] q[32] 8 </args>
+      <args> q[24] q[33] 9 </args>
+      <args> q[24] q[34] 10 </args>
+      <args> q[24] q[35] 11 </args>
+      <args> q[24] q[36] 12 </args>
+      <args> q[24] q[37] 13 </args>
+      <args> q[24] q[38] 14 </args>
+      <args> q[24] q[39] 15 </args>
+      <args> q[24] q[40] 16 </args>
+      <args> q[24] q[41] 17 </args>
+      <args> q[24] q[42] 18 </args>
+      <args> q[24] q[43] 19 </args>
+      <args> q[24] q[44] 20 </args>
+      <args> q[24] q[45] 21 </args>
+      <args> q[24] q[46] 22 </args>
+      <args> q[24] q[47] 23 </args>
+      <args> q[24] q[48] 24 </args>
+      <args> q[24] q[49] 25 </args>
+      <args> q[25] q[26] 1 </args>
+      <args> q[25] q[27] 2 </args>
+      <args> q[25] q[28] 3 </args>
+      <args> q[25] q[29] 4 </args>
+      <args> q[25] q[30] 5 </args>
+      <args> q[25] q[31] 6 </args>
+      <args> q[25] q[32] 7 </args>
+      <args> q[25] q[33] 8 </args>
+      <args> q[25] q[34] 9 </args>
+      <args> q[25] q[35] 10 </args>
+      <args> q[25] q[36] 11 </args>
+      <args> q[25] q[37] 12 </args>
+      <args> q[25] q[38] 13 </args>
+      <args> q[25] q[39] 14 </args>
+      <args> q[25] q[40] 15 </args>
+      <args> q[25] q[41] 16 </args>
+      <args> q[25] q[42] 17 </args>
+      <args> q[25] q[43] 18 </args>
+      <args> q[25] q[44] 19 </args>
+      <args> q[25] q[45] 20 </args>
+      <args> q[25] q[46] 21 </args>
+      <args> q[25] q[47] 22 </args>
+      <args> q[25] q[48] 23 </args>
+      <args> q[25] q[49] 24 </args>
+      <args> q[26] q[27] 1 </args>
+      <args> q[26] q[28] 2 </args>
+      <args> q[26] q[29] 3 </args>
+      <args> q[26] q[30] 4 </args>
+      <args> q[26] q[31] 5 </args>
+      <args> q[26] q[32] 6 </args>
+      <args> q[26] q[33] 7 </args>
+      <args> q[26] q[34] 8 </args>
+      <args> q[26] q[35] 9 </args>
+      <args> q[26] q[36] 10 </args>
+      <args> q[26] q[37] 11 </args>
+      <args> q[26] q[38] 12 </args>
+      <args> q[26] q[39] 13 </args>
+      <args> q[26] q[40] 14 </args>
+      <args> q[26] q[41] 15 </args>
+      <args> q[26] q[42] 16 </args>
+      <args> q[26] q[43] 17 </args>
+      <args> q[26] q[44] 18 </args>
+      <args> q[26] q[45] 19 </args>
+      <args> q[26] q[46] 20 </args>
+      <args> q[26] q[47] 21 </args>
+      <args> q[26] q[48] 22 </args>
+      <args> q[26] q[49] 23 </args>
+      <args> q[27] q[28] 1 </args>
+      <args> q[27] q[29] 2 </args>
+      <args> q[27] q[30] 3 </args>
+      <args> q[27] q[31] 4 </args>
+      <args> q[27] q[32] 5 </args>
+      <args> q[27] q[33] 6 </args>
+      <args> q[27] q[34] 7 </args>
+      <args> q[27] q[35] 8 </args>
+      <args> q[27] q[36] 9 </args>
+      <args> q[27] q[37] 10 </args>
+      <args> q[27] q[38] 11 </args>
+      <args> q[27] q[39] 12 </args>
+      <args> q[27] q[40] 13 </args>
+      <args> q[27] q[41] 14 </args>
+      <args> q[27] q[42] 15 </args>
+      <args> q[27] q[43] 16 </args>
+      <args> q[27] q[44] 17 </args>
+      <args> q[27] q[45] 18 </args>
+      <args> q[27] q[46] 19 </args>
+      <args> q[27] q[47] 20 </args>
+      <args> q[27] q[48] 21 </args>
+      <args> q[27] q[49] 22 </args>
+      <args> q[28] q[29] 1 </args>
+      <args> q[28] q[30] 2 </args>
+      <args> q[28] q[31] 3 </args>
+      <args> q[28] q[32] 4 </args>
+      <args> q[28] q[33] 5 </args>
+      <args> q[28] q[34] 6 </args>
+      <args> q[28] q[35] 7 </args>
+      <args> q[28] q[36] 8 </args>
+      <args> q[28] q[37] 9 </args>
+      <args> q[28] q[38] 10 </args>
+      <args> q[28] q[39] 11 </args>
+      <args> q[28] q[40] 12 </args>
+      <args> q[28] q[41] 13 </args>
+      <args> q[28] q[42] 14 </args>
+      <args> q[28] q[43] 15 </args>
+      <args> q[28] q[44] 16 </args>
+      <args> q[28] q[45] 17 </args>
+      <args> q[28] q[46] 18 </args>
+      <args> q[28] q[47] 19 </args>
+      <args> q[28] q[48] 20 </args>
+      <args> q[28] q[49] 21 </args>
+      <args> q[29] q[30] 1 </args>
+      <args> q[29] q[31] 2 </args>
+      <args> q[29] q[32] 3 </args>
+      <args> q[29] q[33] 4 </args>
+      <args> q[29] q[34] 5 </args>
+      <args> q[29] q[35] 6 </args>
+      <args> q[29] q[36] 7 </args>
+      <args> q[29] q[37] 8 </args>
+      <args> q[29] q[38] 9 </args>
+      <args> q[29] q[39] 10 </args>
+      <args> q[29] q[40] 11 </args>
+      <args> q[29] q[41] 12 </args>
+      <args> q[29] q[42] 13 </args>
+      <args> q[29] q[43] 14 </args>
+      <args> q[29] q[44] 15 </args>
+      <args> q[29] q[45] 16 </args>
+      <args> q[29] q[46] 17 </args>
+      <args> q[29] q[47] 18 </args>
+      <args> q[29] q[48] 19 </args>
+      <args> q[29] q[49] 20 </args>
+      <args> q[30] q[31] 1 </args>
+      <args> q[30] q[32] 2 </args>
+      <args> q[30] q[33] 3 </args>
+      <args> q[30] q[34] 4 </args>
+      <args> q[30] q[35] 5 </args>
+      <args> q[30] q[36] 6 </args>
+      <args> q[30] q[37] 7 </args>
+      <args> q[30] q[38] 8 </args>
+      <args> q[30] q[39] 9 </args>
+      <args> q[30] q[40] 10 </args>
+      <args> q[30] q[41] 11 </args>
+      <args> q[30] q[42] 12 </args>
+      <args> q[30] q[43] 13 </args>
+      <args> q[30] q[44] 14 </args>
+      <args> q[30] q[45] 15 </args>
+      <args> q[30] q[46] 16 </args>
+      <args> q[30] q[47] 17 </args>
+      <args> q[30] q[48] 18 </args>
+      <args> q[30] q[49] 19 </args>
+      <args> q[31] q[32] 1 </args>
+      <args> q[31] q[33] 2 </args>
+      <args> q[31] q[34] 3 </args>
+      <args> q[31] q[35] 4 </args>
+      <args> q[31] q[36] 5 </args>
+      <args> q[31] q[37] 6 </args>
+      <args> q[31] q[38] 7 </args>
+      <args> q[31] q[39] 8 </args>
+      <args> q[31] q[40] 9 </args>
+      <args> q[31] q[41] 10 </args>
+      <args> q[31] q[42] 11 </args>
+      <args> q[31] q[43] 12 </args>
+      <args> q[31] q[44] 13 </args>
+      <args> q[31] q[45] 14 </args>
+      <args> q[31] q[46] 15 </args>
+      <args> q[31] q[47] 16 </args>
+      <args> q[31] q[48] 17 </args>
+      <args> q[31] q[49] 18 </args>
+      <args> q[32] q[33] 1 </args>
+      <args> q[32] q[34] 2 </args>
+      <args> q[32] q[35] 3 </args>
+      <args> q[32] q[36] 4 </args>
+      <args> q[32] q[37] 5 </args>
+      <args> q[32] q[38] 6 </args>
+      <args> q[32] q[39] 7 </args>
+      <args> q[32] q[40] 8 </args>
+      <args> q[32] q[41] 9 </args>
+      <args> q[32] q[42] 10 </args>
+      <args> q[32] q[43] 11 </args>
+      <args> q[32] q[44] 12 </args>
+      <args> q[32] q[45] 13 </args>
+      <args> q[32] q[46] 14 </args>
+      <args> q[32] q[47] 15 </args>
+      <args> q[32] q[48] 16 </args>
+      <args> q[32] q[49] 17 </args>
+      <args> q[33] q[34] 1 </args>
+      <args> q[33] q[35] 2 </args>
+      <args> q[33] q[36] 3 </args>
+      <args> q[33] q[37] 4 </args>
+      <args> q[33] q[38] 5 </args>
+      <args> q[33] q[39] 6 </args>
+      <args> q[33] q[40] 7 </args>
+      <args> q[33] q[41] 8 </args>
+      <args> q[33] q[42] 9 </args>
+      <args> q[33] q[43] 10 </args>
+      <args> q[33] q[44] 11 </args>
+      <args> q[33] q[45] 12 </args>
+      <args> q[33] q[46] 13 </args>
+      <args> q[33] q[47] 14 </args>
+      <args> q[33] q[48] 15 </args>
+      <args> q[33] q[49] 16 </args>
+      <args> q[34] q[35] 1 </args>
+      <args> q[34] q[36] 2 </args>
+      <args> q[34] q[37] 3 </args>
+      <args> q[34] q[38] 4 </args>
+      <args> q[34] q[39] 5 </args>
+      <args> q[34] q[40] 6 </args>
+      <args> q[34] q[41] 7 </args>
+      <args> q[34] q[42] 8 </args>
+      <args> q[34] q[43] 9 </args>
+      <args> q[34] q[44] 10 </args>
+      <args> q[34] q[45] 11 </args>
+      <args> q[34] q[46] 12 </args>
+      <args> q[34] q[47] 13 </args>
+      <args> q[34] q[48] 14 </args>
+      <args> q[34] q[49] 15 </args>
+      <args> q[35] q[36] 1 </args>
+      <args> q[35] q[37] 2 </args>
+      <args> q[35] q[38] 3 </args>
+      <args> q[35] q[39] 4 </args>
+      <args> q[35] q[40] 5 </args>
+      <args> q[35] q[41] 6 </args>
+      <args> q[35] q[42] 7 </args>
+      <args> q[35] q[43] 8 </args>
+      <args> q[35] q[44] 9 </args>
+      <args> q[35] q[45] 10 </args>
+      <args> q[35] q[46] 11 </args>
+      <args> q[35] q[47] 12 </args>
+      <args> q[35] q[48] 13 </args>
+      <args> q[35] q[49] 14 </args>
+      <args> q[36] q[37] 1 </args>
+      <args> q[36] q[38] 2 </args>
+      <args> q[36] q[39] 3 </args>
+      <args> q[36] q[40] 4 </args>
+      <args> q[36] q[41] 5 </args>
+      <args> q[36] q[42] 6 </args>
+      <args> q[36] q[43] 7 </args>
+      <args> q[36] q[44] 8 </args>
+      <args> q[36] q[45] 9 </args>
+      <args> q[36] q[46] 10 </args>
+      <args> q[36] q[47] 11 </args>
+      <args> q[36] q[48] 12 </args>
+      <args> q[36] q[49] 13 </args>
+      <args> q[37] q[38] 1 </args>
+      <args> q[37] q[39] 2 </args>
+      <args> q[37] q[40] 3 </args>
+      <args> q[37] q[41] 4 </args>
+      <args> q[37] q[42] 5 </args>
+      <args> q[37] q[43] 6 </args>
+      <args> q[37] q[44] 7 </args>
+      <args> q[37] q[45] 8 </args>
+      <args> q[37] q[46] 9 </args>
+      <args> q[37] q[47] 10 </args>
+      <args> q[37] q[48] 11 </args>
+      <args> q[37] q[49] 12 </args>
+      <args> q[38] q[39] 1 </args>
+      <args> q[38] q[40] 2 </args>
+      <args> q[38] q[41] 3 </args>
+      <args> q[38] q[42] 4 </args>
+      <args> q[38] q[43] 5 </args>
+      <args> q[38] q[44] 6 </args>
+      <args> q[38] q[45] 7 </args>
+      <args> q[38] q[46] 8 </args>
+      <args> q[38] q[47] 9 </args>
+      <args> q[38] q[48] 10 </args>
+      <args> q[38] q[49] 11 </args>
+      <args> q[39] q[40] 1 </args>
+      <args> q[39] q[41] 2 </args>
+      <args> q[39] q[42] 3 </args>
+      <args> q[39] q[43] 4 </args>
+      <args> q[39] q[44] 5 </args>
+      <args> q[39] q[45] 6 </args>
+      <args> q[39] q[46] 7 </args>
+      <args> q[39] q[47] 8 </args>
+      <args> q[39] q[48] 9 </args>
+      <args> q[39] q[49] 10 </args>
+      <args> q[40] q[41] 1 </args>
+      <args> q[40] q[42] 2 </args>
+      <args> q[40] q[43] 3 </args>
+      <args> q[40] q[44] 4 </args>
+      <args> q[40] q[45] 5 </args>
+      <args> q[40] q[46] 6 </args>
+      <args> q[40] q[47] 7 </args>
+      <args> q[40] q[48] 8 </args>
+      <args> q[40] q[49] 9 </args>
+      <args> q[41] q[42] 1 </args>
+      <args> q[41] q[43] 2 </args>
+      <args> q[41] q[44] 3 </args>
+      <args> q[41] q[45] 4 </args>
+      <args> q[41] q[46] 5 </args>
+      <args> q[41] q[47] 6 </args>
+      <args> q[41] q[48] 7 </args>
+      <args> q[41] q[49] 8 </args>
+      <args> q[42] q[43] 1 </args>
+      <args> q[42] q[44] 2 </args>
+      <args> q[42] q[45] 3 </args>
+      <args> q[42] q[46] 4 </args>
+      <args> q[42] q[47] 5 </args>
+      <args> q[42] q[48] 6 </args>
+      <args> q[42] q[49] 7 </args>
+      <args> q[43] q[44] 1 </args>
+      <args> q[43] q[45] 2 </args>
+      <args> q[43] q[46] 3 </args>
+      <args> q[43] q[47] 4 </args>
+      <args> q[43] q[48] 5 </args>
+      <args> q[43] q[49] 6 </args>
+      <args> q[44] q[45] 1 </args>
+      <args> q[44] q[46] 2 </args>
+      <args> q[44] q[47] 3 </args>
+      <args> q[44] q[48] 4 </args>
+      <args> q[44] q[49] 5 </args>
+      <args> q[45] q[46] 1 </args>
+      <args> q[45] q[47] 2 </args>
+      <args> q[45] q[48] 3 </args>
+      <args> q[45] q[49] 4 </args>
+      <args> q[46] q[47] 1 </args>
+      <args> q[46] q[48] 2 </args>
+      <args> q[46] q[49] 3 </args>
+      <args> q[47] q[48] 1 </args>
+      <args> q[47] q[49] 2 </args>
+      <args> q[48] q[49] 1 </args>
+    </group>
+    <group>
+      <intension> or(and(eq(dist(div(%0,%1),div(%2,%3)),%4),eq(dist(mod(%0,%5),mod(%2,%6)),%7)),and(eq(dist(div(%0,%8),div(%2,%9)),%10),eq(dist(mod(%0,%11),mod(%2,%12)),%13))) </intension>
+      <args> k[0] 50 k[1] 50 1 50 50 2 50 50 2 50 50 1 </args>
+      <args> k[1] 50 k[2] 50 1 50 50 2 50 50 2 50 50 1 </args>
+      <args> k[2] 50 k[3] 50 1 50 50 2 50 50 2 50 50 1 </args>
+      <args> k[3] 50 k[4] 50 1 50 50 2 50 50 2 50 50 1 </args>
+      <args> k[4] 50 k[0] 50 1 50 50 2 50 50 2 50 50 1 </args>
+    </group>
+    <group>
+      <intension> ne(%0,%1) </intension>
+      <args> k[0] k[2] </args>
+      <args> k[0] k[3] </args>
+      <args> k[1] k[3] </args>
+      <args> k[1] k[4] </args>
+      <args> k[2] k[4] </args>
+    </group>
+    <group>
+      <intension> or(ne(%0,mod(%1,%2)),ne(%3,div(%1,%4))) </intension>
+      <args> q[0] k[0] 50 0 50 </args>
+      <args> q[0] k[1] 50 0 50 </args>
+      <args> q[0] k[2] 50 0 50 </args>
+      <args> q[0] k[3] 50 0 50 </args>
+      <args> q[0] k[4] 50 0 50 </args>
+      <args> q[1] k[0] 50 1 50 </args>
+      <args> q[1] k[1] 50 1 50 </args>
+      <args> q[1] k[2] 50 1 50 </args>
+      <args> q[1] k[3] 50 1 50 </args>
+      <args> q[1] k[4] 50 1 50 </args>
+      <args> q[2] k[0] 50 2 50 </args>
+      <args> q[2] k[1] 50 2 50 </args>
+      <args> q[2] k[2] 50 2 50 </args>
+      <args> q[2] k[3] 50 2 50 </args>
+      <args> q[2] k[4] 50 2 50 </args>
+      <args> q[3] k[0] 50 3 50 </args>
+      <args> q[3] k[1] 50 3 50 </args>
+      <args> q[3] k[2] 50 3 50 </args>
+      <args> q[3] k[3] 50 3 50 </args>
+      <args> q[3] k[4] 50 3 50 </args>
+      <args> q[4] k[0] 50 4 50 </args>
+      <args> q[4] k[1] 50 4 50 </args>
+      <args> q[4] k[2] 50 4 50 </args>
+      <args> q[4] k[3] 50 4 50 </args>
+      <args> q[4] k[4] 50 4 50 </args>
+      <args> q[5] k[0] 50 5 50 </args>
+      <args> q[5] k[1] 50 5 50 </args>
+      <args> q[5] k[2] 50 5 50 </args>
+      <args> q[5] k[3] 50 5 50 </args>
+      <args> q[5] k[4] 50 5 50 </args>
+      <args> q[6] k[0] 50 6 50 </args>
+      <args> q[6] k[1] 50 6 50 </args>
+      <args> q[6] k[2] 50 6 50 </args>
+      <args> q[6] k[3] 50 6 50 </args>
+      <args> q[6] k[4] 50 6 50 </args>
+      <args> q[7] k[0] 50 7 50 </args>
+      <args> q[7] k[1] 50 7 50 </args>
+      <args> q[7] k[2] 50 7 50 </args>
+      <args> q[7] k[3] 50 7 50 </args>
+      <args> q[7] k[4] 50 7 50 </args>
+      <args> q[8] k[0] 50 8 50 </args>
+      <args> q[8] k[1] 50 8 50 </args>
+      <args> q[8] k[2] 50 8 50 </args>
+      <args> q[8] k[3] 50 8 50 </args>
+      <args> q[8] k[4] 50 8 50 </args>
+      <args> q[9] k[0] 50 9 50 </args>
+      <args> q[9] k[1] 50 9 50 </args>
+      <args> q[9] k[2] 50 9 50 </args>
+      <args> q[9] k[3] 50 9 50 </args>
+      <args> q[9] k[4] 50 9 50 </args>
+      <args> q[10] k[0] 50 10 50 </args>
+      <args> q[10] k[1] 50 10 50 </args>
+      <args> q[10] k[2] 50 10 50 </args>
+      <args> q[10] k[3] 50 10 50 </args>
+      <args> q[10] k[4] 50 10 50 </args>
+      <args> q[11] k[0] 50 11 50 </args>
+      <args> q[11] k[1] 50 11 50 </args>
+      <args> q[11] k[2] 50 11 50 </args>
+      <args> q[11] k[3] 50 11 50 </args>
+      <args> q[11] k[4] 50 11 50 </args>
+      <args> q[12] k[0] 50 12 50 </args>
+      <args> q[12] k[1] 50 12 50 </args>
+      <args> q[12] k[2] 50 12 50 </args>
+      <args> q[12] k[3] 50 12 50 </args>
+      <args> q[12] k[4] 50 12 50 </args>
+      <args> q[13] k[0] 50 13 50 </args>
+      <args> q[13] k[1] 50 13 50 </args>
+      <args> q[13] k[2] 50 13 50 </args>
+      <args> q[13] k[3] 50 13 50 </args>
+      <args> q[13] k[4] 50 13 50 </args>
+      <args> q[14] k[0] 50 14 50 </args>
+      <args> q[14] k[1] 50 14 50 </args>
+      <args> q[14] k[2] 50 14 50 </args>
+      <args> q[14] k[3] 50 14 50 </args>
+      <args> q[14] k[4] 50 14 50 </args>
+      <args> q[15] k[0] 50 15 50 </args>
+      <args> q[15] k[1] 50 15 50 </args>
+      <args> q[15] k[2] 50 15 50 </args>
+      <args> q[15] k[3] 50 15 50 </args>
+      <args> q[15] k[4] 50 15 50 </args>
+      <args> q[16] k[0] 50 16 50 </args>
+      <args> q[16] k[1] 50 16 50 </args>
+      <args> q[16] k[2] 50 16 50 </args>
+      <args> q[16] k[3] 50 16 50 </args>
+      <args> q[16] k[4] 50 16 50 </args>
+      <args> q[17] k[0] 50 17 50 </args>
+      <args> q[17] k[1] 50 17 50 </args>
+      <args> q[17] k[2] 50 17 50 </args>
+      <args> q[17] k[3] 50 17 50 </args>
+      <args> q[17] k[4] 50 17 50 </args>
+      <args> q[18] k[0] 50 18 50 </args>
+      <args> q[18] k[1] 50 18 50 </args>
+      <args> q[18] k[2] 50 18 50 </args>
+      <args> q[18] k[3] 50 18 50 </args>
+      <args> q[18] k[4] 50 18 50 </args>
+      <args> q[19] k[0] 50 19 50 </args>
+      <args> q[19] k[1] 50 19 50 </args>
+      <args> q[19] k[2] 50 19 50 </args>
+      <args> q[19] k[3] 50 19 50 </args>
+      <args> q[19] k[4] 50 19 50 </args>
+      <args> q[20] k[0] 50 20 50 </args>
+      <args> q[20] k[1] 50 20 50 </args>
+      <args> q[20] k[2] 50 20 50 </args>
+      <args> q[20] k[3] 50 20 50 </args>
+      <args> q[20] k[4] 50 20 50 </args>
+      <args> q[21] k[0] 50 21 50 </args>
+      <args> q[21] k[1] 50 21 50 </args>
+      <args> q[21] k[2] 50 21 50 </args>
+      <args> q[21] k[3] 50 21 50 </args>
+      <args> q[21] k[4] 50 21 50 </args>
+      <args> q[22] k[0] 50 22 50 </args>
+      <args> q[22] k[1] 50 22 50 </args>
+      <args> q[22] k[2] 50 22 50 </args>
+      <args> q[22] k[3] 50 22 50 </args>
+      <args> q[22] k[4] 50 22 50 </args>
+      <args> q[23] k[0] 50 23 50 </args>
+      <args> q[23] k[1] 50 23 50 </args>
+      <args> q[23] k[2] 50 23 50 </args>
+      <args> q[23] k[3] 50 23 50 </args>
+      <args> q[23] k[4] 50 23 50 </args>
+      <args> q[24] k[0] 50 24 50 </args>
+      <args> q[24] k[1] 50 24 50 </args>
+      <args> q[24] k[2] 50 24 50 </args>
+      <args> q[24] k[3] 50 24 50 </args>
+      <args> q[24] k[4] 50 24 50 </args>
+      <args> q[25] k[0] 50 25 50 </args>
+      <args> q[25] k[1] 50 25 50 </args>
+      <args> q[25] k[2] 50 25 50 </args>
+      <args> q[25] k[3] 50 25 50 </args>
+      <args> q[25] k[4] 50 25 50 </args>
+      <args> q[26] k[0] 50 26 50 </args>
+      <args> q[26] k[1] 50 26 50 </args>
+      <args> q[26] k[2] 50 26 50 </args>
+      <args> q[26] k[3] 50 26 50 </args>
+      <args> q[26] k[4] 50 26 50 </args>
+      <args> q[27] k[0] 50 27 50 </args>
+      <args> q[27] k[1] 50 27 50 </args>
+      <args> q[27] k[2] 50 27 50 </args>
+      <args> q[27] k[3] 50 27 50 </args>
+      <args> q[27] k[4] 50 27 50 </args>
+      <args> q[28] k[0] 50 28 50 </args>
+      <args> q[28] k[1] 50 28 50 </args>
+      <args> q[28] k[2] 50 28 50 </args>
+      <args> q[28] k[3] 50 28 50 </args>
+      <args> q[28] k[4] 50 28 50 </args>
+      <args> q[29] k[0] 50 29 50 </args>
+      <args> q[29] k[1] 50 29 50 </args>
+      <args> q[29] k[2] 50 29 50 </args>
+      <args> q[29] k[3] 50 29 50 </args>
+      <args> q[29] k[4] 50 29 50 </args>
+      <args> q[30] k[0] 50 30 50 </args>
+      <args> q[30] k[1] 50 30 50 </args>
+      <args> q[30] k[2] 50 30 50 </args>
+      <args> q[30] k[3] 50 30 50 </args>
+      <args> q[30] k[4] 50 30 50 </args>
+      <args> q[31] k[0] 50 31 50 </args>
+      <args> q[31] k[1] 50 31 50 </args>
+      <args> q[31] k[2] 50 31 50 </args>
+      <args> q[31] k[3] 50 31 50 </args>
+      <args> q[31] k[4] 50 31 50 </args>
+      <args> q[32] k[0] 50 32 50 </args>
+      <args> q[32] k[1] 50 32 50 </args>
+      <args> q[32] k[2] 50 32 50 </args>
+      <args> q[32] k[3] 50 32 50 </args>
+      <args> q[32] k[4] 50 32 50 </args>
+      <args> q[33] k[0] 50 33 50 </args>
+      <args> q[33] k[1] 50 33 50 </args>
+      <args> q[33] k[2] 50 33 50 </args>
+      <args> q[33] k[3] 50 33 50 </args>
+      <args> q[33] k[4] 50 33 50 </args>
+      <args> q[34] k[0] 50 34 50 </args>
+      <args> q[34] k[1] 50 34 50 </args>
+      <args> q[34] k[2] 50 34 50 </args>
+      <args> q[34] k[3] 50 34 50 </args>
+      <args> q[34] k[4] 50 34 50 </args>
+      <args> q[35] k[0] 50 35 50 </args>
+      <args> q[35] k[1] 50 35 50 </args>
+      <args> q[35] k[2] 50 35 50 </args>
+      <args> q[35] k[3] 50 35 50 </args>
+      <args> q[35] k[4] 50 35 50 </args>
+      <args> q[36] k[0] 50 36 50 </args>
+      <args> q[36] k[1] 50 36 50 </args>
+      <args> q[36] k[2] 50 36 50 </args>
+      <args> q[36] k[3] 50 36 50 </args>
+      <args> q[36] k[4] 50 36 50 </args>
+      <args> q[37] k[0] 50 37 50 </args>
+      <args> q[37] k[1] 50 37 50 </args>
+      <args> q[37] k[2] 50 37 50 </args>
+      <args> q[37] k[3] 50 37 50 </args>
+      <args> q[37] k[4] 50 37 50 </args>
+      <args> q[38] k[0] 50 38 50 </args>
+      <args> q[38] k[1] 50 38 50 </args>
+      <args> q[38] k[2] 50 38 50 </args>
+      <args> q[38] k[3] 50 38 50 </args>
+      <args> q[38] k[4] 50 38 50 </args>
+      <args> q[39] k[0] 50 39 50 </args>
+      <args> q[39] k[1] 50 39 50 </args>
+      <args> q[39] k[2] 50 39 50 </args>
+      <args> q[39] k[3] 50 39 50 </args>
+      <args> q[39] k[4] 50 39 50 </args>
+      <args> q[40] k[0] 50 40 50 </args>
+      <args> q[40] k[1] 50 40 50 </args>
+      <args> q[40] k[2] 50 40 50 </args>
+      <args> q[40] k[3] 50 40 50 </args>
+      <args> q[40] k[4] 50 40 50 </args>
+      <args> q[41] k[0] 50 41 50 </args>
+      <args> q[41] k[1] 50 41 50 </args>
+      <args> q[41] k[2] 50 41 50 </args>
+      <args> q[41] k[3] 50 41 50 </args>
+      <args> q[41] k[4] 50 41 50 </args>
+      <args> q[42] k[0] 50 42 50 </args>
+      <args> q[42] k[1] 50 42 50 </args>
+      <args> q[42] k[2] 50 42 50 </args>
+      <args> q[42] k[3] 50 42 50 </args>
+      <args> q[42] k[4] 50 42 50 </args>
+      <args> q[43] k[0] 50 43 50 </args>
+      <args> q[43] k[1] 50 43 50 </args>
+      <args> q[43] k[2] 50 43 50 </args>
+      <args> q[43] k[3] 50 43 50 </args>
+      <args> q[43] k[4] 50 43 50 </args>
+      <args> q[44] k[0] 50 44 50 </args>
+      <args> q[44] k[1] 50 44 50 </args>
+      <args> q[44] k[2] 50 44 50 </args>
+      <args> q[44] k[3] 50 44 50 </args>
+      <args> q[44] k[4] 50 44 50 </args>
+      <args> q[45] k[0] 50 45 50 </args>
+      <args> q[45] k[1] 50 45 50 </args>
+      <args> q[45] k[2] 50 45 50 </args>
+      <args> q[45] k[3] 50 45 50 </args>
+      <args> q[45] k[4] 50 45 50 </args>
+      <args> q[46] k[0] 50 46 50 </args>
+      <args> q[46] k[1] 50 46 50 </args>
+      <args> q[46] k[2] 50 46 50 </args>
+      <args> q[46] k[3] 50 46 50 </args>
+      <args> q[46] k[4] 50 46 50 </args>
+      <args> q[47] k[0] 50 47 50 </args>
+      <args> q[47] k[1] 50 47 50 </args>
+      <args> q[47] k[2] 50 47 50 </args>
+      <args> q[47] k[3] 50 47 50 </args>
+      <args> q[47] k[4] 50 47 50 </args>
+      <args> q[48] k[0] 50 48 50 </args>
+      <args> q[48] k[1] 50 48 50 </args>
+      <args> q[48] k[2] 50 48 50 </args>
+      <args> q[48] k[3] 50 48 50 </args>
+      <args> q[48] k[4] 50 48 50 </args>
+      <args> q[49] k[0] 50 49 50 </args>
+      <args> q[49] k[1] 50 49 50 </args>
+      <args> q[49] k[2] 50 49 50 </args>
+      <args> q[49] k[3] 50 49 50 </args>
+      <args> q[49] k[4] 50 49 50 </args>
+    </group>
+  </constraints>
+</instance>
