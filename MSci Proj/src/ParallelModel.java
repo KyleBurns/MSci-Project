@@ -27,6 +27,7 @@ public abstract class ParallelModel {
     private int NUM_WORKERS;
     
     private final Object finishLock = new Object();
+    private final Object optimalLock = new Object();
     private int bestSolutionValue;
     
     ArrayList<Thread> threads = new ArrayList<Thread>();
@@ -112,31 +113,72 @@ public abstract class ParallelModel {
         	solvers[threadIndex] = solver;
 	    	
 	    	
-	   	    solver.plugMonitor(new IMonitorRestart() {
-	   	    	@Override	
-	   	    	public void beforeRestart() {	   	    		
-	   	    		try {	    	   	    	
-	   	    			long count = System.nanoTime();
-	   	    			timeSpentSearching += count - startTime;
-	   	    			cyclicBarrier.await(100, TimeUnit.SECONDS);
-	   	    			
-	   	    			timeSpentAtBarrier += System.nanoTime() - count;
-	   	    			count = System.nanoTime();
-	   	    			extractNogoodFromPathParallel(model, png, decisions);
-	   	    			
-	   	    			cyclicBarrier.await(100, TimeUnit.SECONDS);
-	   	    			
-	   	    			timeSpentBuildingNogoods += System.nanoTime() - count;  
-	   	    			startTime = System.nanoTime();
+        	if(solver.getObjectiveManager().isOptimization()) {
+        		
+    	   	    solver.plugMonitor(new IMonitorRestart() {
+    	   	    	@Override	
+    	   	    	public void beforeRestart() {	
+    	   	    		try {
+		   	    			long count = System.nanoTime();
+		   	    			timeSpentSearching += count - startTime;   	    			
+		   	    			cyclicBarrier.await(100, TimeUnit.SECONDS);
+		   	    			
+		   	    			ResolutionPolicy rp = solver.getModel().getResolutionPolicy();
+	   	    				int solverBest = solver.getBestSolutionValue().intValue();
+	   	    				synchronized(optimalLock) {
+	   	    					if((rp == ResolutionPolicy.MAXIMIZE && solverBest > bestSolutionValue) ||	   	    					
+	   	    					   (rp == ResolutionPolicy.MINIMIZE && solverBest < bestSolutionValue))
+	   	    					   bestSolutionValue = solverBest;
+	   	    				}
+		   	    					
+		   	    			timeSpentAtBarrier += System.nanoTime() - count;
+		   	    			count = System.nanoTime();
+		   	    			extractNogoodFromPathParallel(model, png, decisions);
+		   	    			cyclicBarrier.await(100, TimeUnit.SECONDS);
+		   	    			
+		   	    			
+		   	    			if(rp == ResolutionPolicy.MAXIMIZE)
+		   	    				 solver.getObjectiveManager().updateBestLB(bestSolutionValue);
+		   	    			else solver.getObjectiveManager().updateBestUB(bestSolutionValue);
+		   	    			
+		   	    			timeSpentBuildingNogoods += System.nanoTime() - count;  
+		   	    			startTime = System.nanoTime();
+    	   	    		}
+	    	   	    	catch (BrokenBarrierException | InterruptedException | TimeoutException e) {	             
+    	                	solver.limitSearch(() -> true);	              
+    	                	return;
+	    	            }
 		   	    	}
-	                catch (BrokenBarrierException | InterruptedException | TimeoutException e) {	             
-	                	solver.limitSearch(() -> true);	              
-	                	return;
-	                }			   	    		
-	   	    	}
-		    });	   	    
-	   	    
-	   	    
+    	   	    });
+    	   	    
+        	}
+        	else {
+        		
+        		solver.plugMonitor(new IMonitorRestart() {
+    	   	    	@Override	
+    	   	    	public void beforeRestart() {
+    	   	    		try {
+		   	    			long count = System.nanoTime();
+		   	    			timeSpentSearching += count - startTime;   	    			
+		   	    			cyclicBarrier.await(100, TimeUnit.SECONDS);
+		   	    			timeSpentAtBarrier += System.nanoTime() - count;
+		   	    			count = System.nanoTime();
+		   	    			extractNogoodFromPathParallel(model, png, decisions);
+		   	    			
+		   	    			cyclicBarrier.await(100, TimeUnit.SECONDS);
+		   	    			timeSpentBuildingNogoods += System.nanoTime() - count;  
+		   	    			startTime = System.nanoTime();
+    	   	    		}
+		    	   	    catch (BrokenBarrierException | InterruptedException | TimeoutException e) {	             
+	    	                solver.limitSearch(() -> true);	              
+	    	                return;
+		    	   	    }
+    	   	    	}
+        		});
+        		
+        	}
+        	
+        	
 	   	    try {
 				cyclicBarrier.await();
 			} catch (InterruptedException | BrokenBarrierException e) {
@@ -168,14 +210,8 @@ public abstract class ParallelModel {
 			   	    
 			   	    if(solver.getObjectiveManager().isOptimization()) {			   
 			   	    	status = false;
-			   	    	for(Solver s: solvers) {
-		   					int solverBest = s.getBestSolutionValue().intValue();
-		   					status = status || s.isObjectiveOptimal();
-		   					
-		   					if((s.getModel().getResolutionPolicy() == ResolutionPolicy.MAXIMIZE && solverBest > bestSolutionValue) ||
-		   					   (s.getModel().getResolutionPolicy() == ResolutionPolicy.MINIMIZE && solverBest < bestSolutionValue)) 
-		   						bestSolutionValue = solverBest;		   	    	
-			   	    	}
+			   	    	for(Solver s: solvers)
+		   					status = status || s.isObjectiveOptimal();    	
 			   	    }
 			   	    
 			   	    			
