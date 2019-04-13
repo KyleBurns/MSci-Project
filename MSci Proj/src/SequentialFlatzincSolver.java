@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Random;
 
 import org.chocosolver.parser.flatzinc.Flatzinc;
+import org.chocosolver.parser.xcsp.XCSP;
 import org.chocosolver.pf4cs.SetUpException;
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.ResolutionPolicy;
@@ -30,20 +31,44 @@ public class SequentialFlatzincSolver {
 	
 	public SequentialFlatzincSolver(String filepath) {
 		this.filepath = filepath;
-		Flatzinc fzn = new Flatzinc();
+		if(filepath.endsWith(".fzn"))
+			model = buildFznModel();
+		else model = buildXcspModel();    
+	}
+
+	public Model buildFznModel() {
+		Flatzinc fzn = new Flatzinc();	
 		try {
 			fzn.setUp(filepath);
 		} catch (SetUpException e) {
 			e.printStackTrace();
 		}
+		
         fzn.createSolver();
         fzn.buildModel();
-        model = fzn.getModel();
-        
-        if(model.getSolver().getSearch() == null);
-        	model.getSolver().setSearch(Search.inputOrderLBSearch(model.retrieveIntVars(true)));        
+        Model model = fzn.getModel();
+        if(model.getSolver().getSearch() == null)
+        	model.getSolver().setSearch(Search.defaultSearch(model));
+        return model;
 	}
-
+	
+	public Model buildXcspModel() {
+		XCSP xcsp = new XCSP();
+		try {
+			xcsp.setUp(filepath);
+		} catch (SetUpException e) {
+			e.printStackTrace();
+		}
+		
+        xcsp.createSolver();
+        xcsp.buildModel();
+        Model model = xcsp.getModel();
+     
+        if(model.getSolver().getSearch() == null)
+        	model.getSolver().setSearch(Search.defaultSearch(model));
+        return model;
+	}
+	
 	public void runModel(int useRestarts) {
 		String outFile = "";
         if(useRestarts > 0) {
@@ -58,7 +83,7 @@ public class SequentialFlatzincSolver {
 		
         Solver solver = model.getSolver();
     	
-        solver.limitTime("100s");
+        solver.limitTime("1000s");
    	    Boolean status = null;
    	    
    	    if(solver.getObjectiveManager().isOptimization()) {
@@ -72,7 +97,7 @@ public class SequentialFlatzincSolver {
 		float time = solver.getTimeCount();
 				
 		File file = new File(filepath);
-		String instance = file.getName().replaceFirst(".czn", "");
+		String instance = file.getName().replaceFirst(".czn", "").replaceFirst(".xml", "");
 		String problem = new File(file.getParent()).getName();
 		File resultFile = new File("results-" + outFile + ".txt");
 		
