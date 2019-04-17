@@ -1,0 +1,218 @@
+amaze 2012-03-09 sat 0.031896356 78
+amaze 2012-04-27 sat 3.4043987 253432
+amaze 2012-05-31 sat 0.4274224 12404
+amaze 2012-06-15 sat 0.59300214 17099
+amaze mod2012-06-22 sat 29.41257 1568730
+black-hole 12 sat 0.8347057 7612
+black-hole 16 timeout 1000.00037 27021751
+black-hole 18 sat 10.213996 158249
+black-hole 4 timeout 1000.0004 13854114
+black-hole 6 unsat 0.033546764 0
+costasarray 16 sat 19.743406 344161
+costasarray 17 sat 214.28935 3626296
+costasarray 18 sat 16.578218 225636
+costasarray 19 timeout 1000.00037 12397279
+costasarray 20 timeout 1000.0003 11291775
+cryptanalysis kb128_n5_obj11 unsat 55.957787 26175
+cryptanalysis kb128_n5_obj14 unsat 266.41647 130954
+cryptanalysis kb128_n5_obj16 sat 111.96267 36283
+cryptanalysis kb128_n5_obj17 sat 419.02008 137401
+cryptanalysis kb192_n7_obj10 unsat 246.91107 72741
+fillomino 5x5_1 sat 222.41853 4543268
+fillomino 5x5_6 sat 766.8752 24980235
+fillomino 6x6_0 timeout 1000.00037 12436755
+fillomino 6x6_5 timeout 1000.0003 15231751
+fillomino 7x7_0 timeout 1000.00037 13196090
+m-knapsack mknap1-6 timeout 1000.00024 334296448
+m-knapsack mknap2-10 timeout 1000.0003 242859871
+m-knapsack mknap2-1 sat 76.165474 2771929
+m-knapsack mknap2-20 sat 1.1221185 236291
+m-knapsack mknap2-31 timeout 1000.0003 202353713
+nonogram dom_06 sat 0.2034215 2372
+nonogram dom_08 sat 19.800035 435291
+nonogram dom_10 timeout 1000.00037 17794918
+nonogram dom_12 timeout 1000.0004 14549966
+nonogram dom_14 timeout 1000.00055 12160582
+oocsp_racks oocsp_racks_030_f7 timeout 1000.00024 25949582
+oocsp_racks oocsp_racks_030_mii8_cc timeout 1000.00037 41196672
+oocsp_racks oocsp_racks_050_e5 timeout 1000.0003 16692738
+oocsp_racks oocsp_racks_050_r1 sat 1.2810457 596
+oocsp_racks oocsp_racks_100_r1_cc sat 0.796445 9
+pentominoes-int 02 sat 0.16912192 79
+pentominoes-int 04 sat 230.33755 9766
+pentominoes-int 05 sat 2.1981227 1959
+pentominoes-int 06 sat 0.21847117 104
+pentominoes-int 07 sat 13.789862 12704
+rect_packing rpp18_true sat 16.150482 201111
+rect_packing rpp21_false sat 23.046198 241071
+rect_packing rpp22_false sat 95.71034 1042303
+rect_packing rpp23_false sat 760.5468 8565917
+rect_packing rpp26_false timeout 1000.0004 10446442
+rotating-workforce Example1014 timeout 1000.0004 9335085
+rotating-workforce Example103 sat 383.47247 5291726
+rotating-workforce Example1479 sat 15.412618 128979
+rotating-workforce Example1780 timeout 1000.0004 9535357
+rotating-workforce Example593 timeout 1000.0003 11899827
+soccer-computational 02 sat 0.16545957 79
+soccer-computational 04 sat 224.40132 9766
+soccer-computational 05 sat 2.2472897 1959
+soccer-computational 06 sat 0.22283123 104
+soccer-computational 07 sat 13.440451 12704
+solbat sb_13_13_5_1 sat 237.98634 759267
+solbat sb_13_13_5_5 unsat 157.22331 616784
+solbat sb_15_15_6_0 timeout 1000.0004 2929290
+solbat sb_15_15_7_3 sat 330.14557 991848
+solbat sb_15_15_7_5 sat 292.43546 1117367
+city-position city-5-05 sat 59.12178 4483833 2850
+city-position city-5-06 sat 154.3538 13685659 3493
+city-position city-5-08 timeout 1000.0002 76035099 4964
+city-position city-7-04 timeout 1000.0004 73534887 669833
+city-position city-8-06 timeout 1000.00024 68444315 2231558
+community-detection dolphin.s62.k3 timeout 1000.0004 22395923 -1
+community-detection mexican.s26.k4 timeout 1000.00024 34987075 48
+community-detection Sampson.s10.k3 sat 136.42633 9608721 10
+community-detection Strike.s2.k8 timeout 1000.00024 46591793 73
+community-detection Strike.s6.k5 timeout 1000.0003 66971687 57
+concert-hall-cap concert-cap.mznc2018.02 sat 146.51773 8404336 48278
+concert-hall-cap concert-cap.mznc2018.03 timeout 1000.0004 32693982 26746
+concert-hall-cap concert-cap.mznc2018.06 timeout 1000.00037 31868397 30812
+concert-hall-cap concert-cap.mznc2018.148 sat 532.1642 48609514 38112
+concert-hall-cap concert-cap.mznc2018.318 timeout 1000.0004 33888113 47275
+elitserien handball15 sat 100.61605 718584 6
+elitserien handball16 sat 160.50484 2471591 4
+elitserien handball18 sat 70.47826 840169 4
+elitserien handball1 sat 137.6053 2112758 2
+elitserien handball6 sat 71.504616 835213 4
+gbac reduced_UD4-gbac timeout 1000.0004 18195053 4771
+gbac UD2-gbac timeout 1000.0003 66071839 12423
+gbac UD4-gbac timeout 1000.0004 42258212 12141
+gbac UD5-gbac timeout 1000.0004 25528629 23029
+gbac UD8-gbac timeout 1000.00037 30347505 10417
+gfd-schedule n100f7d50m20k10 timeout 1000.0004 7355018 73501
+gfd-schedule n200f5d50m40k6 timeout 1000.00055 2011154 129101
+gfd-schedule n65f2d50m20k10 timeout 1000.0003 28499640 1917
+gfd-schedule n80f7d30m7k7 timeout 1000.00055 15658069 35381
+gfd-schedule n90f5d40m30k6 timeout 1000.00037 23082403 1415
+groupsplitter u12g1pref0 sat 9.005147 819 207
+groupsplitter u12g1pref1 sat 7.8519073 676 216
+groupsplitter u15g3pref2 timeout 1000.001 271541 128
+groupsplitter u5g1pref0 sat 1.9505928 430 90
+groupsplitter u6g3pref0 timeout 1000.0007 174971 140
+hrc exp1-1-5145 timeout 1000.00104 15695686 3
+hrc exp1-1-5670 sat 261.34625 1212989 2
+hrc exp1-1-945 timeout 1000.00037 7386046 11
+hrc exp2-1-4795 timeout 1000.0003 9975127 101
+hrc exp2-1-5180 timeout 1000.00037 9130382 101
+largescheduling instance-0100-4 timeout 1000.0003 31520192 226176
+largescheduling instance-0400-4 timeout 1000.00055 37133335 794580
+largescheduling instance-0800-4 timeout 1000.00055 10231708 1720924
+largescheduling instance-1600-4 timeout 1000.0006 5938073 3388660
+largescheduling instance-3200-4 timeout 1000.0008 2304245 6814907
+ma-path-finding g16_p10_a10 timeout 1000.0042 650967 200
+ma-path-finding g16_p10_a20 timeout 1000.00037 727651 475
+ma-path-finding g16_p20_a20 timeout 1000.00134 1807683 436
+ma-path-finding g24_p10_a05 timeout 1000.0907 39350 124
+mapping full2x2_mp3 timeout 1000.0006 158808963 1222
+mapping mesh3x3_mp3_2 timeout 1000.0003 102197084 1394
+mapping mesh3x3_mpeg timeout 1000.0004 27129393 788
+mapping mesh_star_2 timeout 1000.00055 3365157 10001
+mapping ring_mp3 timeout 1000.0003 47439683 1446
+mario mario_medium_1 timeout 1000.0003 26169640 1284
+mario mario_medium_3 timeout 1000.0003 25665331 1401
+mario mario_medium_4 timeout 1000.0003 25928658 1012
+mario mario_medium_5 sat 193.34529 4567103 1035
+mario mario_n_medium_1 sat 135.6854 3365772 1062
+neighbours neighbours1 sat 331.38425 17484032 63
+neighbours neighbours3 timeout 1000.0003 112037060 71
+neighbours neighbours5 timeout 1000.00037 115976728 55
+neighbours neighbours7 timeout 1000.0004 57184124 35
+neighbours neighbours9 timeout 1000.0003 124212111 35
+on-call-rostering 10s-100d-C timeout 1000.00037 58708877 47
+on-call-rostering 20s-100d-B timeout 1000.0003 10992234 61
+on-call-rostering 2s-200d timeout 1000.00037 27835341 68
+on-call-rostering 30s-400d-A timeout 1000.00037 11512937 295
+on-call-rostering 4s-100d timeout 1000.0003 27839925 61
+opd flener_et_al_15_350_100 timeout 1000.00037 10048130 77
+opd medium_13_250_80 timeout 1000.0004 12270921 55
+opd small_bibd_06_50_25 sat 247.09659 18892536 10
+opd small_bibd_06_60_30 timeout 1000.0003 76140729 13
+opd small_bibd_08_28_14 sat 447.9525 29578359 6
+opt-cryptanalysis2017 r11 timeout 1000.0003 8040616 56
+opt-cryptanalysis2017 r15 timeout 1000.00055 4884300 65
+opt-cryptanalysis2017 r5 timeout 1000.00037 24765265 20
+opt-cryptanalysis2017 r7 timeout 1000.0006 8755084 28
+opt-cryptanalysis2017 r9 timeout 1000.00037 6931978 36
+opt-cryptanalysis2018 r10 timeout 1000.0003 8170703 44
+opt-cryptanalysis2018 r12 timeout 1000.0004 7741476 60
+opt-cryptanalysis2018 r14 timeout 1000.0007 5836402 65
+opt-cryptanalysis2018 r6 timeout 1000.00024 13767603 24
+opt-cryptanalysis2018 r8 timeout 1000.00055 7443807 32
+racp j30_13_6_1.25 timeout 1000.0003 7939849 1531
+racp j30_14_7_1.25 timeout 1000.00037 7432283 1800
+racp j30_26_2_1.0 sat 431.0397 3196599 704
+racp j60_14_7_1.25 timeout 1000.00055 2168597 4282
+racp j60_29_10_1.0 timeout 1000.00037 3613026 3438
+rel2onto 3_9 sat 149.734 289998 70802
+rel2onto 5_17 timeout 1000.00024 1478888 152691
+rel2onto 5_28 timeout 1000.0007 1262029 167732
+rel2onto 5_5 timeout 1000.00037 1208212 161783
+rel2onto 5_6 timeout 1000.00037 1593484 149034
+road-cons road_17 timeout 1000.0088 47727 136000001
+road-cons road_18 timeout 1000.0354 46200 15036443
+road-cons road_25 timeout 1000.01666 59295 16675
+road-cons road_26 timeout 1000.0125 31277 29930
+rspsp-wet j30_1_3-wet timeout 1000.00037 19527270 146
+rspsp-wet j30_43_10-wet timeout 1000.0003 6050204 154
+rspsp-wet j60_19_6-wet timeout 1000.00037 11301366 550
+rspsp-wet j60_28_3-wet timeout 1000.0002 4918553 590
+rspsp-wet j90_48_4-wet timeout 1000.00055 5175054 1644
+seat-moving sm-10-12-00 timeout 1000.0004 15541748 554
+seat-moving sm-10-20-05 timeout 1000.00037 21371122 137
+seat-moving sm-15-12-00 timeout 1000.00037 11675869 1651
+seat-moving sm-15-20-00 timeout 1000.00037 16079331 207
+seat-moving sm-20-20-00 timeout 1000.00037 23897731 287
+steelmillslab bench_13_0 timeout 1000.0004 1934463 27
+steelmillslab bench_14_1 sat 500.6611 850843 0
+steelmillslab bench_15_11 timeout 1000.00085 1206086 35
+steelmillslab bench_16_10 sat 413.98367 845826 0
+steelmillslab bench_19_5 timeout 1000.0018 1492670 28
+steiner-tree es10fst03.stp sat 1.4991586 35133 23936808
+steiner-tree es10fst10.stp sat 6.9389977 131962 20280160
+steiner-tree es20fst08.stp timeout 1000.0007 3074703 80304156
+steiner-tree es20fst09.stp timeout 1000.0004 7010952 52917462
+steiner-tree es20fst14.stp timeout 1000.00055 4767719 30700185
+tc-graph-color k10_31 sat 96.84276 7338923 427
+tc-graph-color k10_34 sat 7.7999077 429538 433
+tc-graph-color k2_42 timeout 1000.00037 129231014 231
+tc-graph-color k5_05 sat 18.636013 1570162 273
+tc-graph-color k9_39 timeout 1000.00037 70047604 486
+tdtsp inst_10_35_20 timeout 1000.00037 49183271 12537
+tdtsp inst_10_42_00 timeout 1000.0003 98648809 15910
+tdtsp inst_10_58_20 timeout 1000.00037 33355638 13799
+tdtsp inst_20_26_00 timeout 1000.0004 20476212 22674
+tdtsp inst_20_36_10 timeout 1000.0004 24072803 21996
+team-assignment data1_6_24 timeout 1000.00037 29831757 12202
+team-assignment data2_4_15 timeout 1000.0006 60352221 4732
+team-assignment data2_5_6 timeout 1000.0004 39277694 953
+team-assignment data2_6_12 timeout 1000.0004 44691301 6731
+team-assignment data3_6_28 timeout 1000.00037 25776923 6083
+train instance.10 timeout 1000.0004 100867186 84150
+train instance.16 timeout 1000.00037 105190342 96545
+train instance.17 timeout 1000.00037 121212823 40980
+train instance.4 timeout 1000.0004 34090771 2850001
+train instance.5 timeout 1000.0006 36580944 2850001
+traveling-tppv circ14anonbal timeout 1000.00037 4262880 468
+traveling-tppv circ20hnonbal timeout 1000.0006 2925408 4001
+traveling-tppv circ20inonbal timeout 1000.0006 3507177 1348
+traveling-tppv circ8abal timeout 1000.0003 5889923 82
+traveling-tppv circ8dbal sat 966.79767 5896897 80
+triangular n10 sat 124.10189 34536305 20
+triangular n16 timeout 1000.00024 182801823 35
+triangular n22 timeout 1000.00037 145449689 48
+triangular n28 timeout 1000.0003 84679354 61
+triangular n37 timeout 1000.00037 20610061 79
+vrplc vrplc11_5_15_s3 timeout 1000.00037 4078177 1031
+vrplc vrplc13_11_15_s3 timeout 1000.0004 3671740 1309
+vrplc vrplc9_5_10_s1 timeout 1000.00037 5195877 351
+vrplc vrplc9_5_10_s3 timeout 1000.00055 5581959 329
+vrplc vrplc9_5_15_s3 timeout 1000.00055 4305219 1225
