@@ -1,0 +1,1 @@
+samples Langford-4-16 unsat 50.07299 585465

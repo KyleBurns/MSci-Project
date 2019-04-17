@@ -1,0 +1,1 @@
+samples SchurrLemma-050-9-mod unsat 68.96482 295879

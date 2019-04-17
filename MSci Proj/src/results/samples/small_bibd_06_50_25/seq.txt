@@ -1,0 +1,1 @@
+samples small_bibd_06_50_25 sat 244.8928 18892536 10

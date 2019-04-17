@@ -1,0 +1,12 @@
+samples 07 sat 14.187271 12704
+samples 16 sat 18.267954 344161
+samples 3_9 sat 144.93608 289998 70802
+samples Dubois-022 unsat 70.13205 8752393
+samples exp1-1-5670 sat 272.04297 1212989 2
+samples handball1 sat 134.28932 2112758 2
+samples kb128_n5_obj16 sat 109.90461 36283
+samples Langford-4-16 unsat 50.07299 585465
+samples pigeonsPlus-11-03 unsat 75.33575 6678597
+samples sb_13_13_5_1 sat 230.20647 759267
+samples SchurrLemma-050-9-mod unsat 68.96482 295879
+samples small_bibd_06_50_25 sat 244.8928 18892536 10
